@@ -1,0 +1,2221 @@
+Dispositivo utilizado:  cuda
+
+Informações sobre o Dataset completo: 
+
+ Dataset ImageFolder
+    Number of datapoints: 5000
+    Root location: dataset
+    StandardTransform
+Transform: Compose(
+               Resize(size=(164, 164), interpolation=bilinear, max_size=None, antialias=True)
+               RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)
+               RandomAffine(degrees=[0.0, 0.0], translate=(0.1, 0.1), scale=(0.9, 1.1), shear=[-10.0, 10.0])
+               ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.9, 1.1), hue=(-0.1, 0.1))
+               ToTensor()
+               Lambda()
+               Normalize(mean=[0.5], std=[0.5])
+           )
+
+Rótulos:  {'NORMAL': 0, 'PNEUMONIA': 1, 'TUBERCULOSE': 2}
+
+Fold 1/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1479
+Pneumonia: 1502
+Tuberculose: 1519
+
+Época 1/200 - Perda no treinamento: 0.930426 - Acc: 74.58%
+Época 2/200 - Perda no treinamento: 0.411472 - Acc: 83.98%
+Época 3/200 - Perda no treinamento: 0.341548 - Acc: 86.71%
+Época 4/200 - Perda no treinamento: 0.313877 - Acc: 88.76%
+Época 5/200 - Perda no treinamento: 0.289691 - Acc: 88.87%
+Época 6/200 - Perda no treinamento: 0.284935 - Acc: 89.11%
+Época 7/200 - Perda no treinamento: 0.251003 - Acc: 90.60%
+Época 8/200 - Perda no treinamento: 0.256075 - Acc: 90.47%
+Época 9/200 - Perda no treinamento: 0.245828 - Acc: 91.09%
+Época 10/200 - Perda no treinamento: 0.244459 - Acc: 90.93%
+Época 11/200 - Perda no treinamento: 0.241911 - Acc: 90.60%
+Época 12/200 - Perda no treinamento: 0.222726 - Acc: 91.93%
+Época 13/200 - Perda no treinamento: 0.222274 - Acc: 91.44%
+Época 14/200 - Perda no treinamento: 0.204756 - Acc: 92.33%
+Época 15/200 - Perda no treinamento: 0.206305 - Acc: 92.51%
+Época 16/200 - Perda no treinamento: 0.212280 - Acc: 91.71%
+Época 17/200 - Perda no treinamento: 0.202408 - Acc: 92.58%
+Época 18/200 - Perda no treinamento: 0.203177 - Acc: 92.76%
+Época 19/200 - Perda no treinamento: 0.188638 - Acc: 93.31%
+Época 20/200 - Perda no treinamento: 0.183596 - Acc: 93.16%
+Época 21/200 - Perda no treinamento: 0.192392 - Acc: 92.84%
+Época 22/200 - Perda no treinamento: 0.189227 - Acc: 93.09%
+Época 23/200 - Perda no treinamento: 0.211750 - Acc: 92.31%
+Época 24/200 - Perda no treinamento: 0.177548 - Acc: 93.40%
+Época 25/200 - Perda no treinamento: 0.189845 - Acc: 93.20%
+Época 26/200 - Perda no treinamento: 0.183712 - Acc: 93.36%
+Época 27/200 - Perda no treinamento: 0.161938 - Acc: 94.31%
+Época 28/200 - Perda no treinamento: 0.178650 - Acc: 93.11%
+Época 29/200 - Perda no treinamento: 0.172408 - Acc: 93.56%
+Época 30/200 - Perda no treinamento: 0.174752 - Acc: 93.49%
+Época 31/200 - Perda no treinamento: 0.179928 - Acc: 93.96%
+Época 32/200 - Perda no treinamento: 0.166485 - Acc: 93.60%
+Época 33/200 - Perda no treinamento: 0.160602 - Acc: 94.20%
+Época 34/200 - Perda no treinamento: 0.173741 - Acc: 93.27%
+Época 35/200 - Perda no treinamento: 0.173779 - Acc: 93.71%
+Época 36/200 - Perda no treinamento: 0.158292 - Acc: 94.27%
+Época 37/200 - Perda no treinamento: 0.166946 - Acc: 93.78%
+Época 38/200 - Perda no treinamento: 0.150520 - Acc: 94.82%
+Época 39/200 - Perda no treinamento: 0.174336 - Acc: 93.60%
+Época 40/200 - Perda no treinamento: 0.166390 - Acc: 94.02%
+Época 41/200 - Perda no treinamento: 0.146471 - Acc: 94.22%
+Época 42/200 - Perda no treinamento: 0.138727 - Acc: 95.04%
+Época 43/200 - Perda no treinamento: 0.151259 - Acc: 94.56%
+Época 44/200 - Perda no treinamento: 0.140289 - Acc: 94.69%
+Época 45/200 - Perda no treinamento: 0.151994 - Acc: 94.40%
+Época 46/200 - Perda no treinamento: 0.152753 - Acc: 94.64%
+Época 47/200 - Perda no treinamento: 0.143223 - Acc: 94.58%
+Época 48/200 - Perda no treinamento: 0.144544 - Acc: 94.69%
+Época 49/200 - Perda no treinamento: 0.147798 - Acc: 94.71%
+Época 50/200 - Perda no treinamento: 0.143407 - Acc: 94.51%
+Época 51/200 - Perda no treinamento: 0.141640 - Acc: 94.78%
+Época 52/200 - Perda no treinamento: 0.150425 - Acc: 94.60%
+Época 53/200 - Perda no treinamento: 0.140727 - Acc: 94.82%
+Época 54/200 - Perda no treinamento: 0.141173 - Acc: 94.80%
+Época 55/200 - Perda no treinamento: 0.134341 - Acc: 95.00%
+Época 56/200 - Perda no treinamento: 0.140848 - Acc: 94.96%
+Época 57/200 - Perda no treinamento: 0.146849 - Acc: 94.62%
+Época 58/200 - Perda no treinamento: 0.136979 - Acc: 94.96%
+Época 59/200 - Perda no treinamento: 0.142827 - Acc: 94.56%
+Época 60/200 - Perda no treinamento: 0.158695 - Acc: 94.62%
+Época 61/200 - Perda no treinamento: 0.157484 - Acc: 94.82%
+Época 62/200 - Perda no treinamento: 0.136949 - Acc: 95.29%
+Época 63/200 - Perda no treinamento: 0.139615 - Acc: 94.89%
+Época 64/200 - Perda no treinamento: 0.146040 - Acc: 94.87%
+Época 65/200 - Perda no treinamento: 0.129813 - Acc: 95.18%
+Época 66/200 - Perda no treinamento: 0.125874 - Acc: 95.29%
+Época 67/200 - Perda no treinamento: 0.123073 - Acc: 95.51%
+Época 68/200 - Perda no treinamento: 0.133262 - Acc: 95.24%
+Época 69/200 - Perda no treinamento: 0.110773 - Acc: 96.04%
+Época 70/200 - Perda no treinamento: 0.132702 - Acc: 95.29%
+Época 71/200 - Perda no treinamento: 0.126120 - Acc: 95.11%
+Época 72/200 - Perda no treinamento: 0.137523 - Acc: 95.38%
+Época 73/200 - Perda no treinamento: 0.120291 - Acc: 95.64%
+Época 74/200 - Perda no treinamento: 0.137204 - Acc: 95.33%
+Época 75/200 - Perda no treinamento: 0.120486 - Acc: 95.89%
+Época 76/200 - Perda no treinamento: 0.118683 - Acc: 95.91%
+Época 77/200 - Perda no treinamento: 0.140967 - Acc: 95.00%
+Época 78/200 - Perda no treinamento: 0.135250 - Acc: 95.09%
+Época 79/200 - Perda no treinamento: 0.123407 - Acc: 95.09%
+Época 80/200 - Perda no treinamento: 0.123663 - Acc: 95.51%
+Época 81/200 - Perda no treinamento: 0.107955 - Acc: 95.91%
+Época 82/200 - Perda no treinamento: 0.118428 - Acc: 95.51%
+Época 83/200 - Perda no treinamento: 0.145146 - Acc: 95.09%
+Época 84/200 - Perda no treinamento: 0.125269 - Acc: 95.56%
+Época 85/200 - Perda no treinamento: 0.119424 - Acc: 95.67%
+Época 86/200 - Perda no treinamento: 0.112556 - Acc: 95.73%
+Época 87/200 - Perda no treinamento: 0.120233 - Acc: 95.64%
+Época 88/200 - Perda no treinamento: 0.116545 - Acc: 95.78%
+Época 89/200 - Perda no treinamento: 0.106371 - Acc: 96.18%
+Época 90/200 - Perda no treinamento: 0.111790 - Acc: 95.91%
+Época 91/200 - Perda no treinamento: 0.118453 - Acc: 95.64%
+Época 92/200 - Perda no treinamento: 0.107172 - Acc: 96.04%
+Época 93/200 - Perda no treinamento: 0.110181 - Acc: 96.09%
+Época 94/200 - Perda no treinamento: 0.113843 - Acc: 96.02%
+Época 95/200 - Perda no treinamento: 0.117794 - Acc: 95.64%
+Época 96/200 - Perda no treinamento: 0.121395 - Acc: 95.53%
+Época 97/200 - Perda no treinamento: 0.102660 - Acc: 96.36%
+Época 98/200 - Perda no treinamento: 0.107597 - Acc: 95.78%
+Época 99/200 - Perda no treinamento: 0.113274 - Acc: 96.00%
+Época 100/200 - Perda no treinamento: 0.123730 - Acc: 95.40%
+Época 101/200 - Perda no treinamento: 0.120654 - Acc: 95.58%
+Época 102/200 - Perda no treinamento: 0.106906 - Acc: 96.13%
+Época 103/200 - Perda no treinamento: 0.119560 - Acc: 95.44%
+Época 104/200 - Perda no treinamento: 0.099746 - Acc: 96.22%
+Época 105/200 - Perda no treinamento: 0.101525 - Acc: 96.40%
+Época 106/200 - Perda no treinamento: 0.102582 - Acc: 95.96%
+Época 107/200 - Perda no treinamento: 0.113074 - Acc: 95.58%
+Época 108/200 - Perda no treinamento: 0.128736 - Acc: 95.31%
+Época 109/200 - Perda no treinamento: 0.101675 - Acc: 96.11%
+Época 110/200 - Perda no treinamento: 0.115417 - Acc: 96.07%
+Época 111/200 - Perda no treinamento: 0.099705 - Acc: 96.49%
+Época 112/200 - Perda no treinamento: 0.099100 - Acc: 96.24%
+Época 113/200 - Perda no treinamento: 0.094757 - Acc: 96.67%
+Época 114/200 - Perda no treinamento: 0.102133 - Acc: 96.09%
+Época 115/200 - Perda no treinamento: 0.101478 - Acc: 96.42%
+Época 116/200 - Perda no treinamento: 0.107305 - Acc: 96.24%
+Época 117/200 - Perda no treinamento: 0.097885 - Acc: 96.60%
+Época 118/200 - Perda no treinamento: 0.108301 - Acc: 95.98%
+Época 119/200 - Perda no treinamento: 0.134032 - Acc: 95.82%
+Época 120/200 - Perda no treinamento: 0.103606 - Acc: 96.13%
+Época 121/200 - Perda no treinamento: 0.101263 - Acc: 96.24%
+Época 122/200 - Perda no treinamento: 0.098028 - Acc: 96.53%
+Época 123/200 - Perda no treinamento: 0.091935 - Acc: 96.58%
+Época 124/200 - Perda no treinamento: 0.101260 - Acc: 96.44%
+Época 125/200 - Perda no treinamento: 0.092031 - Acc: 96.73%
+Época 126/200 - Perda no treinamento: 0.102708 - Acc: 96.33%
+Época 127/200 - Perda no treinamento: 0.095608 - Acc: 96.69%
+Época 128/200 - Perda no treinamento: 0.159389 - Acc: 94.82%
+Época 129/200 - Perda no treinamento: 0.113548 - Acc: 96.22%
+Época 130/200 - Perda no treinamento: 0.095375 - Acc: 96.20%
+Época 131/200 - Perda no treinamento: 0.092821 - Acc: 96.51%
+Época 132/200 - Perda no treinamento: 0.085212 - Acc: 96.67%
+Época 133/200 - Perda no treinamento: 0.094373 - Acc: 96.49%
+Época 134/200 - Perda no treinamento: 0.084168 - Acc: 96.91%
+Época 135/200 - Perda no treinamento: 0.095933 - Acc: 96.64%
+Época 136/200 - Perda no treinamento: 0.101589 - Acc: 96.07%
+Época 137/200 - Perda no treinamento: 0.103146 - Acc: 96.40%
+Época 138/200 - Perda no treinamento: 0.095941 - Acc: 96.40%
+Época 139/200 - Perda no treinamento: 0.097449 - Acc: 96.38%
+Época 140/200 - Perda no treinamento: 0.089800 - Acc: 96.98%
+Época 141/200 - Perda no treinamento: 0.109308 - Acc: 96.00%
+Época 142/200 - Perda no treinamento: 0.090692 - Acc: 96.80%
+Época 143/200 - Perda no treinamento: 0.094458 - Acc: 96.16%
+Época 144/200 - Perda no treinamento: 0.095059 - Acc: 96.62%
+Época 145/200 - Perda no treinamento: 0.086952 - Acc: 96.82%
+Época 146/200 - Perda no treinamento: 0.090067 - Acc: 96.62%
+Época 147/200 - Perda no treinamento: 0.083440 - Acc: 97.02%
+Época 148/200 - Perda no treinamento: 0.082374 - Acc: 97.13%
+Época 149/200 - Perda no treinamento: 0.102535 - Acc: 96.89%
+Época 150/200 - Perda no treinamento: 0.094185 - Acc: 96.49%
+Época 151/200 - Perda no treinamento: 0.086459 - Acc: 96.73%
+Época 152/200 - Perda no treinamento: 0.101091 - Acc: 96.69%
+Época 153/200 - Perda no treinamento: 0.093755 - Acc: 96.51%
+Época 154/200 - Perda no treinamento: 0.081927 - Acc: 97.16%
+Época 155/200 - Perda no treinamento: 0.081432 - Acc: 96.87%
+Época 156/200 - Perda no treinamento: 0.349017 - Acc: 96.38%
+Época 157/200 - Perda no treinamento: 0.086172 - Acc: 96.69%
+Época 158/200 - Perda no treinamento: 0.132339 - Acc: 95.78%
+Época 159/200 - Perda no treinamento: 0.097701 - Acc: 96.36%
+Época 160/200 - Perda no treinamento: 0.085263 - Acc: 96.64%
+Época 161/200 - Perda no treinamento: 0.074143 - Acc: 97.51%
+Época 162/200 - Perda no treinamento: 0.159192 - Acc: 95.73%
+Época 163/200 - Perda no treinamento: 0.114833 - Acc: 96.00%
+Época 164/200 - Perda no treinamento: 0.091311 - Acc: 96.40%
+Época 165/200 - Perda no treinamento: 0.083653 - Acc: 96.60%
+Época 166/200 - Perda no treinamento: 0.090223 - Acc: 96.80%
+Época 167/200 - Perda no treinamento: 0.098434 - Acc: 96.62%
+Época 168/200 - Perda no treinamento: 0.083300 - Acc: 96.93%
+Época 169/200 - Perda no treinamento: 0.087325 - Acc: 96.62%
+Época 170/200 - Perda no treinamento: 0.083294 - Acc: 96.89%
+Época 171/200 - Perda no treinamento: 0.085548 - Acc: 96.69%
+Época 172/200 - Perda no treinamento: 0.070985 - Acc: 97.51%
+Época 173/200 - Perda no treinamento: 0.084975 - Acc: 96.76%
+Época 174/200 - Perda no treinamento: 0.082145 - Acc: 97.07%
+Época 175/200 - Perda no treinamento: 0.092804 - Acc: 96.40%
+Época 176/200 - Perda no treinamento: 0.076480 - Acc: 97.11%
+Época 177/200 - Perda no treinamento: 0.080503 - Acc: 96.76%
+Época 178/200 - Perda no treinamento: 0.085551 - Acc: 97.00%
+Época 179/200 - Perda no treinamento: 0.081239 - Acc: 96.96%
+Época 180/200 - Perda no treinamento: 0.079550 - Acc: 97.38%
+Época 181/200 - Perda no treinamento: 0.077473 - Acc: 97.02%
+Época 182/200 - Perda no treinamento: 0.084975 - Acc: 97.00%
+Época 183/200 - Perda no treinamento: 0.079039 - Acc: 96.89%
+Época 184/200 - Perda no treinamento: 0.084249 - Acc: 96.80%
+Época 185/200 - Perda no treinamento: 0.072768 - Acc: 97.36%
+Época 186/200 - Perda no treinamento: 0.091038 - Acc: 96.60%
+Época 187/200 - Perda no treinamento: 0.084643 - Acc: 96.96%
+Época 188/200 - Perda no treinamento: 0.083711 - Acc: 96.80%
+Época 189/200 - Perda no treinamento: 0.084312 - Acc: 96.80%
+Época 190/200 - Perda no treinamento: 0.082499 - Acc: 97.27%
+Época 191/200 - Perda no treinamento: 0.079915 - Acc: 96.98%
+Época 192/200 - Perda no treinamento: 0.082441 - Acc: 97.04%
+Época 193/200 - Perda no treinamento: 0.077079 - Acc: 97.09%
+Época 194/200 - Perda no treinamento: 0.077924 - Acc: 96.98%
+Época 195/200 - Perda no treinamento: 0.074025 - Acc: 97.00%
+Época 196/200 - Perda no treinamento: 0.147810 - Acc: 96.00%
+Época 197/200 - Perda no treinamento: 0.096100 - Acc: 96.33%
+Época 198/200 - Perda no treinamento: 0.078683 - Acc: 97.00%
+Época 199/200 - Perda no treinamento: 0.078111 - Acc: 97.16%
+Época 200/200 - Perda no treinamento: 0.118525 - Acc: 96.42%
+
+Acurácia para o Fold 1: 95.00%
+Precisão para o Fold 1: 95.17%
+Recall para o Fold 1: 95.00%
+F1 para o Fold 1: 94.99%
+
+!!!Teste finalizado!!!
+
+Fold 2/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1497
+Pneumonia: 1519
+Tuberculose: 1484
+
+Época 1/200 - Perda no treinamento: 0.843298 - Acc: 75.16%
+Época 2/200 - Perda no treinamento: 0.400306 - Acc: 85.07%
+Época 3/200 - Perda no treinamento: 0.357422 - Acc: 86.64%
+Época 4/200 - Perda no treinamento: 0.314202 - Acc: 87.67%
+Época 5/200 - Perda no treinamento: 0.325271 - Acc: 87.40%
+Época 6/200 - Perda no treinamento: 0.278974 - Acc: 89.20%
+Época 7/200 - Perda no treinamento: 0.264447 - Acc: 90.29%
+Época 8/200 - Perda no treinamento: 0.289121 - Acc: 89.40%
+Época 9/200 - Perda no treinamento: 0.268656 - Acc: 89.73%
+Época 10/200 - Perda no treinamento: 0.226484 - Acc: 91.44%
+Época 11/200 - Perda no treinamento: 0.225855 - Acc: 91.47%
+Época 12/200 - Perda no treinamento: 0.227189 - Acc: 91.38%
+Época 13/200 - Perda no treinamento: 0.213949 - Acc: 92.27%
+Época 14/200 - Perda no treinamento: 0.232052 - Acc: 91.71%
+Época 15/200 - Perda no treinamento: 0.218750 - Acc: 91.80%
+Época 16/200 - Perda no treinamento: 0.219849 - Acc: 92.13%
+Época 17/200 - Perda no treinamento: 0.193166 - Acc: 92.82%
+Época 18/200 - Perda no treinamento: 0.201500 - Acc: 92.44%
+Época 19/200 - Perda no treinamento: 0.186957 - Acc: 93.13%
+Época 20/200 - Perda no treinamento: 0.198087 - Acc: 92.71%
+Época 21/200 - Perda no treinamento: 0.223795 - Acc: 92.31%
+Época 22/200 - Perda no treinamento: 0.195239 - Acc: 93.00%
+Época 23/200 - Perda no treinamento: 0.180662 - Acc: 93.02%
+Época 24/200 - Perda no treinamento: 0.188065 - Acc: 92.84%
+Época 25/200 - Perda no treinamento: 0.173426 - Acc: 93.76%
+Época 26/200 - Perda no treinamento: 0.164723 - Acc: 94.13%
+Época 27/200 - Perda no treinamento: 0.166895 - Acc: 94.00%
+Época 28/200 - Perda no treinamento: 0.169113 - Acc: 93.89%
+Época 29/200 - Perda no treinamento: 0.179330 - Acc: 93.56%
+Época 30/200 - Perda no treinamento: 0.168370 - Acc: 93.96%
+Época 31/200 - Perda no treinamento: 0.165886 - Acc: 94.18%
+Época 32/200 - Perda no treinamento: 0.172738 - Acc: 93.38%
+Época 33/200 - Perda no treinamento: 0.185214 - Acc: 93.02%
+Época 34/200 - Perda no treinamento: 0.159295 - Acc: 94.22%
+Época 35/200 - Perda no treinamento: 0.159064 - Acc: 94.78%
+Época 36/200 - Perda no treinamento: 0.157253 - Acc: 94.60%
+Época 37/200 - Perda no treinamento: 0.154243 - Acc: 94.31%
+Época 38/200 - Perda no treinamento: 0.164933 - Acc: 93.96%
+Época 39/200 - Perda no treinamento: 0.152733 - Acc: 94.36%
+Época 40/200 - Perda no treinamento: 0.167637 - Acc: 93.89%
+Época 41/200 - Perda no treinamento: 0.152674 - Acc: 94.60%
+Época 42/200 - Perda no treinamento: 0.137255 - Acc: 95.00%
+Época 43/200 - Perda no treinamento: 0.154791 - Acc: 94.60%
+Época 44/200 - Perda no treinamento: 0.166088 - Acc: 93.84%
+Época 45/200 - Perda no treinamento: 0.143738 - Acc: 94.67%
+Época 46/200 - Perda no treinamento: 0.135880 - Acc: 95.36%
+Época 47/200 - Perda no treinamento: 0.149713 - Acc: 94.47%
+Época 48/200 - Perda no treinamento: 0.140698 - Acc: 94.64%
+Época 49/200 - Perda no treinamento: 0.146855 - Acc: 94.67%
+Época 50/200 - Perda no treinamento: 0.142917 - Acc: 95.13%
+Época 51/200 - Perda no treinamento: 0.141633 - Acc: 94.78%
+Época 52/200 - Perda no treinamento: 0.146826 - Acc: 94.69%
+Época 53/200 - Perda no treinamento: 0.131519 - Acc: 95.09%
+Época 54/200 - Perda no treinamento: 0.147349 - Acc: 95.16%
+Época 55/200 - Perda no treinamento: 0.140971 - Acc: 95.16%
+Época 56/200 - Perda no treinamento: 0.148676 - Acc: 94.40%
+Época 57/200 - Perda no treinamento: 0.130890 - Acc: 95.16%
+Época 58/200 - Perda no treinamento: 0.143569 - Acc: 94.67%
+Época 59/200 - Perda no treinamento: 0.136298 - Acc: 94.80%
+Época 60/200 - Perda no treinamento: 0.126250 - Acc: 95.29%
+Época 61/200 - Perda no treinamento: 0.139803 - Acc: 94.98%
+Época 62/200 - Perda no treinamento: 0.130331 - Acc: 95.60%
+Época 63/200 - Perda no treinamento: 0.133195 - Acc: 95.56%
+Época 64/200 - Perda no treinamento: 0.140303 - Acc: 94.96%
+Época 65/200 - Perda no treinamento: 0.132435 - Acc: 95.24%
+Época 66/200 - Perda no treinamento: 0.136369 - Acc: 95.51%
+Época 67/200 - Perda no treinamento: 0.119835 - Acc: 95.71%
+Época 68/200 - Perda no treinamento: 0.127490 - Acc: 95.29%
+Época 69/200 - Perda no treinamento: 0.117902 - Acc: 96.09%
+Época 70/200 - Perda no treinamento: 0.132230 - Acc: 95.38%
+Época 71/200 - Perda no treinamento: 0.125070 - Acc: 95.31%
+Época 72/200 - Perda no treinamento: 0.129212 - Acc: 95.29%
+Época 73/200 - Perda no treinamento: 0.133672 - Acc: 95.33%
+Época 74/200 - Perda no treinamento: 0.124623 - Acc: 95.56%
+Época 75/200 - Perda no treinamento: 0.129480 - Acc: 95.38%
+Época 76/200 - Perda no treinamento: 0.122165 - Acc: 95.76%
+Época 77/200 - Perda no treinamento: 0.123211 - Acc: 95.73%
+Época 78/200 - Perda no treinamento: 0.132803 - Acc: 95.29%
+Época 79/200 - Perda no treinamento: 0.122383 - Acc: 95.04%
+Época 80/200 - Perda no treinamento: 0.119401 - Acc: 95.67%
+Época 81/200 - Perda no treinamento: 0.109250 - Acc: 96.00%
+Época 82/200 - Perda no treinamento: 0.113731 - Acc: 95.91%
+Época 83/200 - Perda no treinamento: 0.117921 - Acc: 95.40%
+Época 84/200 - Perda no treinamento: 0.110391 - Acc: 96.18%
+Época 85/200 - Perda no treinamento: 0.126692 - Acc: 95.64%
+Época 86/200 - Perda no treinamento: 0.130511 - Acc: 95.56%
+Época 87/200 - Perda no treinamento: 0.111260 - Acc: 96.16%
+Época 88/200 - Perda no treinamento: 0.119274 - Acc: 96.02%
+Época 89/200 - Perda no treinamento: 0.112027 - Acc: 96.07%
+Época 90/200 - Perda no treinamento: 0.116488 - Acc: 95.98%
+Época 91/200 - Perda no treinamento: 0.114603 - Acc: 96.16%
+Época 92/200 - Perda no treinamento: 0.122031 - Acc: 95.69%
+Época 93/200 - Perda no treinamento: 0.103461 - Acc: 96.53%
+Época 94/200 - Perda no treinamento: 0.103275 - Acc: 96.36%
+Época 95/200 - Perda no treinamento: 0.112332 - Acc: 96.07%
+Época 96/200 - Perda no treinamento: 0.105333 - Acc: 96.09%
+Época 97/200 - Perda no treinamento: 0.115606 - Acc: 95.76%
+Época 98/200 - Perda no treinamento: 0.108276 - Acc: 96.13%
+Época 99/200 - Perda no treinamento: 0.131687 - Acc: 95.44%
+Época 100/200 - Perda no treinamento: 0.120162 - Acc: 95.64%
+Época 101/200 - Perda no treinamento: 0.109156 - Acc: 96.13%
+Época 102/200 - Perda no treinamento: 0.111168 - Acc: 95.96%
+Época 103/200 - Perda no treinamento: 0.105103 - Acc: 96.16%
+Época 104/200 - Perda no treinamento: 0.116329 - Acc: 95.91%
+Época 105/200 - Perda no treinamento: 0.112061 - Acc: 95.78%
+Época 106/200 - Perda no treinamento: 0.101603 - Acc: 96.49%
+Época 107/200 - Perda no treinamento: 0.109202 - Acc: 96.13%
+Época 108/200 - Perda no treinamento: 0.100631 - Acc: 96.38%
+Época 109/200 - Perda no treinamento: 0.100467 - Acc: 96.44%
+Época 110/200 - Perda no treinamento: 0.094974 - Acc: 96.60%
+Época 111/200 - Perda no treinamento: 0.089408 - Acc: 96.89%
+Época 112/200 - Perda no treinamento: 0.106557 - Acc: 96.27%
+Época 113/200 - Perda no treinamento: 0.104775 - Acc: 95.96%
+Época 114/200 - Perda no treinamento: 0.097743 - Acc: 96.53%
+Época 115/200 - Perda no treinamento: 0.095563 - Acc: 96.53%
+Época 116/200 - Perda no treinamento: 0.126238 - Acc: 95.98%
+Época 117/200 - Perda no treinamento: 0.107551 - Acc: 96.11%
+Época 118/200 - Perda no treinamento: 0.096237 - Acc: 96.33%
+Época 119/200 - Perda no treinamento: 0.096704 - Acc: 96.62%
+Época 120/200 - Perda no treinamento: 0.100878 - Acc: 96.56%
+Época 121/200 - Perda no treinamento: 0.107568 - Acc: 95.96%
+Época 122/200 - Perda no treinamento: 0.105764 - Acc: 96.40%
+Época 123/200 - Perda no treinamento: 0.102556 - Acc: 96.31%
+Época 124/200 - Perda no treinamento: 0.089564 - Acc: 96.93%
+Época 125/200 - Perda no treinamento: 0.094961 - Acc: 96.42%
+Época 126/200 - Perda no treinamento: 0.090335 - Acc: 96.56%
+Época 127/200 - Perda no treinamento: 0.092780 - Acc: 96.58%
+Época 128/200 - Perda no treinamento: 0.090686 - Acc: 96.89%
+Época 129/200 - Perda no treinamento: 0.118047 - Acc: 95.82%
+Época 130/200 - Perda no treinamento: 0.093484 - Acc: 96.69%
+Época 131/200 - Perda no treinamento: 0.095567 - Acc: 96.47%
+Época 132/200 - Perda no treinamento: 0.087760 - Acc: 96.67%
+Época 133/200 - Perda no treinamento: 0.096964 - Acc: 96.27%
+Época 134/200 - Perda no treinamento: 0.097284 - Acc: 96.44%
+Época 135/200 - Perda no treinamento: 0.086964 - Acc: 96.73%
+Época 136/200 - Perda no treinamento: 0.088674 - Acc: 96.58%
+Época 137/200 - Perda no treinamento: 0.109637 - Acc: 96.36%
+Época 138/200 - Perda no treinamento: 0.096136 - Acc: 96.62%
+Época 139/200 - Perda no treinamento: 0.093534 - Acc: 96.78%
+Época 140/200 - Perda no treinamento: 0.084120 - Acc: 96.76%
+Época 141/200 - Perda no treinamento: 0.101319 - Acc: 96.24%
+Época 142/200 - Perda no treinamento: 0.090161 - Acc: 96.64%
+Época 143/200 - Perda no treinamento: 0.087028 - Acc: 96.98%
+Época 144/200 - Perda no treinamento: 0.093422 - Acc: 96.36%
+Época 145/200 - Perda no treinamento: 0.093718 - Acc: 96.60%
+Época 146/200 - Perda no treinamento: 0.090916 - Acc: 96.27%
+Época 147/200 - Perda no treinamento: 0.101073 - Acc: 96.24%
+Época 148/200 - Perda no treinamento: 0.090840 - Acc: 96.71%
+Época 149/200 - Perda no treinamento: 0.092848 - Acc: 96.67%
+Época 150/200 - Perda no treinamento: 0.089693 - Acc: 96.42%
+Época 151/200 - Perda no treinamento: 0.085575 - Acc: 96.80%
+Época 152/200 - Perda no treinamento: 0.080635 - Acc: 96.98%
+Época 153/200 - Perda no treinamento: 0.091621 - Acc: 96.56%
+Época 154/200 - Perda no treinamento: 0.089243 - Acc: 96.89%
+Época 155/200 - Perda no treinamento: 0.101091 - Acc: 96.93%
+Época 156/200 - Perda no treinamento: 0.092095 - Acc: 96.67%
+Época 157/200 - Perda no treinamento: 0.086126 - Acc: 96.87%
+Época 158/200 - Perda no treinamento: 0.099829 - Acc: 96.42%
+Época 159/200 - Perda no treinamento: 0.108965 - Acc: 96.00%
+Época 160/200 - Perda no treinamento: 0.090418 - Acc: 96.69%
+Época 161/200 - Perda no treinamento: 0.079112 - Acc: 97.16%
+Época 162/200 - Perda no treinamento: 0.084458 - Acc: 97.13%
+Época 163/200 - Perda no treinamento: 0.082995 - Acc: 96.91%
+Época 164/200 - Perda no treinamento: 0.078614 - Acc: 97.09%
+Época 165/200 - Perda no treinamento: 0.082850 - Acc: 97.11%
+Época 166/200 - Perda no treinamento: 0.087883 - Acc: 96.78%
+Época 167/200 - Perda no treinamento: 0.085091 - Acc: 96.91%
+Época 168/200 - Perda no treinamento: 0.086284 - Acc: 96.64%
+Época 169/200 - Perda no treinamento: 0.076069 - Acc: 97.44%
+Época 170/200 - Perda no treinamento: 0.131265 - Acc: 95.51%
+Época 171/200 - Perda no treinamento: 0.101028 - Acc: 96.24%
+Época 172/200 - Perda no treinamento: 0.089857 - Acc: 96.47%
+Época 173/200 - Perda no treinamento: 0.155536 - Acc: 95.51%
+Época 174/200 - Perda no treinamento: 0.094594 - Acc: 96.62%
+Época 175/200 - Perda no treinamento: 0.080720 - Acc: 96.93%
+Época 176/200 - Perda no treinamento: 0.086378 - Acc: 96.76%
+Época 177/200 - Perda no treinamento: 0.089251 - Acc: 96.84%
+Época 178/200 - Perda no treinamento: 0.080641 - Acc: 96.91%
+Época 179/200 - Perda no treinamento: 0.073440 - Acc: 97.29%
+Época 180/200 - Perda no treinamento: 0.080272 - Acc: 97.04%
+Época 181/200 - Perda no treinamento: 0.084354 - Acc: 96.84%
+Época 182/200 - Perda no treinamento: 0.084484 - Acc: 96.87%
+Época 183/200 - Perda no treinamento: 0.078695 - Acc: 97.07%
+Época 184/200 - Perda no treinamento: 0.081572 - Acc: 97.13%
+Época 185/200 - Perda no treinamento: 0.079591 - Acc: 97.38%
+Época 186/200 - Perda no treinamento: 0.076893 - Acc: 96.93%
+Época 187/200 - Perda no treinamento: 0.078750 - Acc: 97.02%
+Época 188/200 - Perda no treinamento: 0.078186 - Acc: 97.13%
+Época 189/200 - Perda no treinamento: 0.122632 - Acc: 96.69%
+Época 190/200 - Perda no treinamento: 0.093819 - Acc: 96.62%
+Época 191/200 - Perda no treinamento: 0.075125 - Acc: 97.38%
+Época 192/200 - Perda no treinamento: 0.086557 - Acc: 96.73%
+Época 193/200 - Perda no treinamento: 0.079990 - Acc: 96.82%
+Época 194/200 - Perda no treinamento: 0.069798 - Acc: 97.24%
+Época 195/200 - Perda no treinamento: 0.090904 - Acc: 96.53%
+Época 196/200 - Perda no treinamento: 0.076278 - Acc: 96.96%
+Época 197/200 - Perda no treinamento: 0.081500 - Acc: 96.69%
+Época 198/200 - Perda no treinamento: 0.073685 - Acc: 97.33%
+Época 199/200 - Perda no treinamento: 0.074717 - Acc: 97.20%
+Época 200/200 - Perda no treinamento: 0.073690 - Acc: 97.27%
+
+Acurácia para o Fold 2: 95.00%
+Precisão para o Fold 2: 95.01%
+Recall para o Fold 2: 95.00%
+F1 para o Fold 2: 95.00%
+
+!!!Teste finalizado!!!
+
+Fold 3/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1495
+Pneumonia: 1498
+Tuberculose: 1507
+
+Época 1/200 - Perda no treinamento: 0.824413 - Acc: 75.18%
+Época 2/200 - Perda no treinamento: 0.441939 - Acc: 83.27%
+Época 3/200 - Perda no treinamento: 0.368486 - Acc: 86.20%
+Época 4/200 - Perda no treinamento: 0.307244 - Acc: 88.36%
+Época 5/200 - Perda no treinamento: 0.286176 - Acc: 89.33%
+Época 6/200 - Perda no treinamento: 0.289540 - Acc: 89.16%
+Época 7/200 - Perda no treinamento: 0.265231 - Acc: 90.38%
+Época 8/200 - Perda no treinamento: 0.263398 - Acc: 90.20%
+Época 9/200 - Perda no treinamento: 0.263098 - Acc: 90.40%
+Época 10/200 - Perda no treinamento: 0.243692 - Acc: 90.93%
+Época 11/200 - Perda no treinamento: 0.245082 - Acc: 90.64%
+Época 12/200 - Perda no treinamento: 0.228984 - Acc: 91.64%
+Época 13/200 - Perda no treinamento: 0.215820 - Acc: 91.84%
+Época 14/200 - Perda no treinamento: 0.212911 - Acc: 92.09%
+Época 15/200 - Perda no treinamento: 0.220924 - Acc: 92.00%
+Época 16/200 - Perda no treinamento: 0.205492 - Acc: 92.22%
+Época 17/200 - Perda no treinamento: 0.192994 - Acc: 92.84%
+Época 18/200 - Perda no treinamento: 0.191063 - Acc: 92.96%
+Época 19/200 - Perda no treinamento: 0.192866 - Acc: 92.76%
+Época 20/200 - Perda no treinamento: 0.196100 - Acc: 92.93%
+Época 21/200 - Perda no treinamento: 0.200919 - Acc: 92.60%
+Época 22/200 - Perda no treinamento: 0.201116 - Acc: 92.58%
+Época 23/200 - Perda no treinamento: 0.178600 - Acc: 93.13%
+Época 24/200 - Perda no treinamento: 0.183494 - Acc: 93.24%
+Época 25/200 - Perda no treinamento: 0.172659 - Acc: 93.56%
+Época 26/200 - Perda no treinamento: 0.182992 - Acc: 93.71%
+Época 27/200 - Perda no treinamento: 0.186946 - Acc: 93.00%
+Época 28/200 - Perda no treinamento: 0.175881 - Acc: 93.67%
+Época 29/200 - Perda no treinamento: 0.189178 - Acc: 93.47%
+Época 30/200 - Perda no treinamento: 0.168871 - Acc: 93.56%
+Época 31/200 - Perda no treinamento: 0.167866 - Acc: 93.96%
+Época 32/200 - Perda no treinamento: 0.171753 - Acc: 93.42%
+Época 33/200 - Perda no treinamento: 0.161972 - Acc: 94.00%
+Época 34/200 - Perda no treinamento: 0.169323 - Acc: 93.76%
+Época 35/200 - Perda no treinamento: 0.155890 - Acc: 94.33%
+Época 36/200 - Perda no treinamento: 0.162769 - Acc: 93.71%
+Época 37/200 - Perda no treinamento: 0.137655 - Acc: 94.76%
+Época 38/200 - Perda no treinamento: 0.167658 - Acc: 93.87%
+Época 39/200 - Perda no treinamento: 0.150347 - Acc: 94.53%
+Época 40/200 - Perda no treinamento: 0.147739 - Acc: 94.40%
+Época 41/200 - Perda no treinamento: 0.146829 - Acc: 94.56%
+Época 42/200 - Perda no treinamento: 0.145383 - Acc: 94.73%
+Época 43/200 - Perda no treinamento: 0.166006 - Acc: 94.27%
+Época 44/200 - Perda no treinamento: 0.145716 - Acc: 94.78%
+Época 45/200 - Perda no treinamento: 0.138379 - Acc: 95.04%
+Época 46/200 - Perda no treinamento: 0.148533 - Acc: 94.93%
+Época 47/200 - Perda no treinamento: 0.163688 - Acc: 94.40%
+Época 48/200 - Perda no treinamento: 0.146533 - Acc: 95.33%
+Época 49/200 - Perda no treinamento: 0.142749 - Acc: 94.84%
+Época 50/200 - Perda no treinamento: 0.138812 - Acc: 95.16%
+Época 51/200 - Perda no treinamento: 0.153536 - Acc: 94.62%
+Época 52/200 - Perda no treinamento: 0.130207 - Acc: 95.38%
+Época 53/200 - Perda no treinamento: 0.135390 - Acc: 95.22%
+Época 54/200 - Perda no treinamento: 0.134504 - Acc: 94.76%
+Época 55/200 - Perda no treinamento: 0.135661 - Acc: 94.87%
+Época 56/200 - Perda no treinamento: 0.138987 - Acc: 95.24%
+Época 57/200 - Perda no treinamento: 0.145000 - Acc: 94.98%
+Época 58/200 - Perda no treinamento: 0.126757 - Acc: 95.49%
+Época 59/200 - Perda no treinamento: 0.125294 - Acc: 94.96%
+Época 60/200 - Perda no treinamento: 0.140458 - Acc: 94.93%
+Época 61/200 - Perda no treinamento: 0.164794 - Acc: 94.82%
+Época 62/200 - Perda no treinamento: 0.131634 - Acc: 95.09%
+Época 63/200 - Perda no treinamento: 0.135674 - Acc: 95.16%
+Época 64/200 - Perda no treinamento: 0.131626 - Acc: 95.11%
+Época 65/200 - Perda no treinamento: 0.146578 - Acc: 94.91%
+Época 66/200 - Perda no treinamento: 0.122033 - Acc: 95.44%
+Época 67/200 - Perda no treinamento: 0.132364 - Acc: 94.93%
+Época 68/200 - Perda no treinamento: 0.128709 - Acc: 95.16%
+Época 69/200 - Perda no treinamento: 0.138380 - Acc: 95.07%
+Época 70/200 - Perda no treinamento: 0.116866 - Acc: 95.71%
+Época 71/200 - Perda no treinamento: 0.119195 - Acc: 95.78%
+Época 72/200 - Perda no treinamento: 0.121064 - Acc: 95.80%
+Época 73/200 - Perda no treinamento: 0.131317 - Acc: 96.02%
+Época 74/200 - Perda no treinamento: 0.114512 - Acc: 95.87%
+Época 75/200 - Perda no treinamento: 0.112248 - Acc: 96.29%
+Época 76/200 - Perda no treinamento: 0.118338 - Acc: 95.58%
+Época 77/200 - Perda no treinamento: 0.105464 - Acc: 96.31%
+Época 78/200 - Perda no treinamento: 0.118464 - Acc: 95.62%
+Época 79/200 - Perda no treinamento: 0.111811 - Acc: 96.00%
+Época 80/200 - Perda no treinamento: 0.110352 - Acc: 95.87%
+Época 81/200 - Perda no treinamento: 0.123773 - Acc: 95.64%
+Época 82/200 - Perda no treinamento: 0.114120 - Acc: 95.78%
+Época 83/200 - Perda no treinamento: 0.117152 - Acc: 95.73%
+Época 84/200 - Perda no treinamento: 0.103527 - Acc: 96.47%
+Época 85/200 - Perda no treinamento: 0.119496 - Acc: 95.56%
+Época 86/200 - Perda no treinamento: 0.103892 - Acc: 96.29%
+Época 87/200 - Perda no treinamento: 0.106231 - Acc: 96.11%
+Época 88/200 - Perda no treinamento: 0.114670 - Acc: 95.60%
+Época 89/200 - Perda no treinamento: 0.112868 - Acc: 95.93%
+Época 90/200 - Perda no treinamento: 0.118975 - Acc: 95.67%
+Época 91/200 - Perda no treinamento: 0.115605 - Acc: 95.91%
+Época 92/200 - Perda no treinamento: 0.112398 - Acc: 95.91%
+Época 93/200 - Perda no treinamento: 0.107147 - Acc: 96.04%
+Época 94/200 - Perda no treinamento: 0.101742 - Acc: 96.33%
+Época 95/200 - Perda no treinamento: 0.112075 - Acc: 95.96%
+Época 96/200 - Perda no treinamento: 0.092279 - Acc: 96.29%
+Época 97/200 - Perda no treinamento: 0.123437 - Acc: 95.69%
+Época 98/200 - Perda no treinamento: 0.098927 - Acc: 96.33%
+Época 99/200 - Perda no treinamento: 0.116218 - Acc: 95.56%
+Época 100/200 - Perda no treinamento: 0.100858 - Acc: 96.20%
+Época 101/200 - Perda no treinamento: 0.099194 - Acc: 96.31%
+Época 102/200 - Perda no treinamento: 0.108516 - Acc: 96.00%
+Época 103/200 - Perda no treinamento: 0.102815 - Acc: 96.02%
+Época 104/200 - Perda no treinamento: 0.096728 - Acc: 96.49%
+Época 105/200 - Perda no treinamento: 0.101778 - Acc: 96.36%
+Época 106/200 - Perda no treinamento: 0.094597 - Acc: 96.56%
+Época 107/200 - Perda no treinamento: 0.096150 - Acc: 96.51%
+Época 108/200 - Perda no treinamento: 0.096665 - Acc: 96.71%
+Época 109/200 - Perda no treinamento: 0.104059 - Acc: 95.96%
+Época 110/200 - Perda no treinamento: 0.093865 - Acc: 96.44%
+Época 111/200 - Perda no treinamento: 0.107892 - Acc: 95.96%
+Época 112/200 - Perda no treinamento: 0.095348 - Acc: 96.49%
+Época 113/200 - Perda no treinamento: 0.095152 - Acc: 96.42%
+Época 114/200 - Perda no treinamento: 0.127639 - Acc: 95.42%
+Época 115/200 - Perda no treinamento: 0.124054 - Acc: 95.58%
+Época 116/200 - Perda no treinamento: 0.099643 - Acc: 96.33%
+Época 117/200 - Perda no treinamento: 0.095068 - Acc: 96.47%
+Época 118/200 - Perda no treinamento: 0.092575 - Acc: 96.60%
+Época 119/200 - Perda no treinamento: 0.097043 - Acc: 96.62%
+Época 120/200 - Perda no treinamento: 0.100278 - Acc: 96.22%
+Época 121/200 - Perda no treinamento: 0.099618 - Acc: 96.24%
+Época 122/200 - Perda no treinamento: 0.091762 - Acc: 96.36%
+Época 123/200 - Perda no treinamento: 0.093465 - Acc: 96.53%
+Época 124/200 - Perda no treinamento: 0.086352 - Acc: 96.64%
+Época 125/200 - Perda no treinamento: 0.096295 - Acc: 96.24%
+Época 126/200 - Perda no treinamento: 0.093619 - Acc: 96.64%
+Época 127/200 - Perda no treinamento: 0.094522 - Acc: 96.53%
+Época 128/200 - Perda no treinamento: 0.088892 - Acc: 96.38%
+Época 129/200 - Perda no treinamento: 0.106533 - Acc: 96.38%
+Época 130/200 - Perda no treinamento: 0.094467 - Acc: 96.24%
+Época 131/200 - Perda no treinamento: 0.103256 - Acc: 96.18%
+Época 132/200 - Perda no treinamento: 0.084112 - Acc: 96.89%
+Época 133/200 - Perda no treinamento: 0.090016 - Acc: 96.36%
+Época 134/200 - Perda no treinamento: 0.082971 - Acc: 96.87%
+Época 135/200 - Perda no treinamento: 0.092681 - Acc: 96.62%
+Época 136/200 - Perda no treinamento: 0.132298 - Acc: 96.11%
+Época 137/200 - Perda no treinamento: 0.099348 - Acc: 96.36%
+Época 138/200 - Perda no treinamento: 0.085778 - Acc: 96.87%
+Época 139/200 - Perda no treinamento: 0.094119 - Acc: 96.58%
+Época 140/200 - Perda no treinamento: 0.081057 - Acc: 97.13%
+Época 141/200 - Perda no treinamento: 0.091506 - Acc: 96.58%
+Época 142/200 - Perda no treinamento: 0.091951 - Acc: 96.69%
+Época 143/200 - Perda no treinamento: 0.088780 - Acc: 96.73%
+Época 144/200 - Perda no treinamento: 0.101227 - Acc: 96.18%
+Época 145/200 - Perda no treinamento: 0.091351 - Acc: 96.69%
+Época 146/200 - Perda no treinamento: 0.093570 - Acc: 96.31%
+Época 147/200 - Perda no treinamento: 0.091668 - Acc: 96.87%
+Época 148/200 - Perda no treinamento: 0.215670 - Acc: 93.51%
+Época 149/200 - Perda no treinamento: 0.114181 - Acc: 96.00%
+Época 150/200 - Perda no treinamento: 0.106273 - Acc: 96.38%
+Época 151/200 - Perda no treinamento: 0.094182 - Acc: 96.47%
+Época 152/200 - Perda no treinamento: 0.096838 - Acc: 96.24%
+Época 153/200 - Perda no treinamento: 0.091455 - Acc: 96.69%
+Época 154/200 - Perda no treinamento: 0.223089 - Acc: 95.40%
+Época 155/200 - Perda no treinamento: 0.145570 - Acc: 95.60%
+Época 156/200 - Perda no treinamento: 0.092233 - Acc: 96.64%
+Época 157/200 - Perda no treinamento: 0.097673 - Acc: 96.49%
+Época 158/200 - Perda no treinamento: 0.094491 - Acc: 96.60%
+Época 159/200 - Perda no treinamento: 0.083237 - Acc: 96.64%
+Época 160/200 - Perda no treinamento: 0.087471 - Acc: 96.82%
+Época 161/200 - Perda no treinamento: 0.079232 - Acc: 96.93%
+Época 162/200 - Perda no treinamento: 0.089453 - Acc: 96.76%
+Época 163/200 - Perda no treinamento: 0.078744 - Acc: 97.11%
+Época 164/200 - Perda no treinamento: 0.089540 - Acc: 96.62%
+Época 165/200 - Perda no treinamento: 0.089179 - Acc: 96.96%
+Época 166/200 - Perda no treinamento: 0.090904 - Acc: 96.78%
+Época 167/200 - Perda no treinamento: 0.079459 - Acc: 97.09%
+Época 168/200 - Perda no treinamento: 0.090440 - Acc: 96.93%
+Época 169/200 - Perda no treinamento: 0.082581 - Acc: 96.76%
+Época 170/200 - Perda no treinamento: 0.092612 - Acc: 96.82%
+Época 171/200 - Perda no treinamento: 0.081720 - Acc: 96.76%
+Época 172/200 - Perda no treinamento: 0.077342 - Acc: 97.31%
+Época 173/200 - Perda no treinamento: 0.084747 - Acc: 96.91%
+Época 174/200 - Perda no treinamento: 0.088652 - Acc: 96.67%
+Época 175/200 - Perda no treinamento: 0.078030 - Acc: 97.07%
+Época 176/200 - Perda no treinamento: 0.086317 - Acc: 96.91%
+Época 177/200 - Perda no treinamento: 0.088519 - Acc: 96.58%
+Época 178/200 - Perda no treinamento: 0.084889 - Acc: 96.78%
+Época 179/200 - Perda no treinamento: 0.086790 - Acc: 96.89%
+Época 180/200 - Perda no treinamento: 0.103771 - Acc: 96.11%
+Época 181/200 - Perda no treinamento: 0.091229 - Acc: 96.69%
+Época 182/200 - Perda no treinamento: 0.083981 - Acc: 96.67%
+Época 183/200 - Perda no treinamento: 0.124742 - Acc: 96.73%
+Época 184/200 - Perda no treinamento: 0.093804 - Acc: 96.78%
+Época 185/200 - Perda no treinamento: 0.080288 - Acc: 97.20%
+Época 186/200 - Perda no treinamento: 0.077662 - Acc: 97.00%
+Época 187/200 - Perda no treinamento: 0.142720 - Acc: 97.04%
+Época 188/200 - Perda no treinamento: 0.089224 - Acc: 96.38%
+Época 189/200 - Perda no treinamento: 0.078142 - Acc: 97.04%
+Época 190/200 - Perda no treinamento: 0.076739 - Acc: 96.98%
+Época 191/200 - Perda no treinamento: 0.078595 - Acc: 97.18%
+Época 192/200 - Perda no treinamento: 0.078947 - Acc: 97.07%
+Época 193/200 - Perda no treinamento: 0.070069 - Acc: 97.47%
+Época 194/200 - Perda no treinamento: 0.085321 - Acc: 96.76%
+Época 195/200 - Perda no treinamento: 0.083817 - Acc: 96.87%
+Época 196/200 - Perda no treinamento: 0.077560 - Acc: 97.16%
+Época 197/200 - Perda no treinamento: 0.072189 - Acc: 97.56%
+Época 198/200 - Perda no treinamento: 0.126041 - Acc: 96.82%
+Época 199/200 - Perda no treinamento: 0.090085 - Acc: 96.62%
+Época 200/200 - Perda no treinamento: 0.085001 - Acc: 96.62%
+
+Acurácia para o Fold 3: 96.80%
+Precisão para o Fold 3: 96.81%
+Recall para o Fold 3: 96.80%
+F1 para o Fold 3: 96.80%
+
+!!!Teste finalizado!!!
+
+Fold 4/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1500
+Pneumonia: 1484
+Tuberculose: 1516
+
+Época 1/200 - Perda no treinamento: 0.707288 - Acc: 75.42%
+Época 2/200 - Perda no treinamento: 0.411329 - Acc: 83.56%
+Época 3/200 - Perda no treinamento: 0.335612 - Acc: 87.11%
+Época 4/200 - Perda no treinamento: 0.311476 - Acc: 87.84%
+Época 5/200 - Perda no treinamento: 0.296190 - Acc: 88.60%
+Época 6/200 - Perda no treinamento: 0.294302 - Acc: 88.73%
+Época 7/200 - Perda no treinamento: 0.262092 - Acc: 90.27%
+Época 8/200 - Perda no treinamento: 0.246120 - Acc: 90.69%
+Época 9/200 - Perda no treinamento: 0.236566 - Acc: 90.80%
+Época 10/200 - Perda no treinamento: 0.223845 - Acc: 91.78%
+Época 11/200 - Perda no treinamento: 0.241069 - Acc: 91.09%
+Época 12/200 - Perda no treinamento: 0.203699 - Acc: 92.24%
+Época 13/200 - Perda no treinamento: 0.223480 - Acc: 91.58%
+Época 14/200 - Perda no treinamento: 0.222657 - Acc: 92.18%
+Época 15/200 - Perda no treinamento: 0.212169 - Acc: 92.11%
+Época 16/200 - Perda no treinamento: 0.214089 - Acc: 92.42%
+Época 17/200 - Perda no treinamento: 0.200830 - Acc: 92.36%
+Época 18/200 - Perda no treinamento: 0.203677 - Acc: 92.51%
+Época 19/200 - Perda no treinamento: 0.204477 - Acc: 92.60%
+Época 20/200 - Perda no treinamento: 0.179269 - Acc: 93.49%
+Época 21/200 - Perda no treinamento: 0.179688 - Acc: 93.11%
+Época 22/200 - Perda no treinamento: 0.192992 - Acc: 92.84%
+Época 23/200 - Perda no treinamento: 0.175469 - Acc: 93.71%
+Época 24/200 - Perda no treinamento: 0.164270 - Acc: 93.87%
+Época 25/200 - Perda no treinamento: 0.177052 - Acc: 93.71%
+Época 26/200 - Perda no treinamento: 0.183028 - Acc: 93.09%
+Época 27/200 - Perda no treinamento: 0.164551 - Acc: 93.82%
+Época 28/200 - Perda no treinamento: 0.164726 - Acc: 94.02%
+Época 29/200 - Perda no treinamento: 0.168792 - Acc: 93.67%
+Época 30/200 - Perda no treinamento: 0.165639 - Acc: 93.98%
+Época 31/200 - Perda no treinamento: 0.156407 - Acc: 94.47%
+Época 32/200 - Perda no treinamento: 0.162711 - Acc: 94.22%
+Época 33/200 - Perda no treinamento: 0.160000 - Acc: 94.13%
+Época 34/200 - Perda no treinamento: 0.161073 - Acc: 94.11%
+Época 35/200 - Perda no treinamento: 0.152477 - Acc: 94.49%
+Época 36/200 - Perda no treinamento: 0.151651 - Acc: 94.31%
+Época 37/200 - Perda no treinamento: 0.163158 - Acc: 94.13%
+Época 38/200 - Perda no treinamento: 0.160708 - Acc: 94.18%
+Época 39/200 - Perda no treinamento: 0.160249 - Acc: 94.44%
+Época 40/200 - Perda no treinamento: 0.141166 - Acc: 95.18%
+Época 41/200 - Perda no treinamento: 0.161270 - Acc: 94.24%
+Época 42/200 - Perda no treinamento: 0.144094 - Acc: 95.07%
+Época 43/200 - Perda no treinamento: 0.146079 - Acc: 95.24%
+Época 44/200 - Perda no treinamento: 0.144356 - Acc: 94.91%
+Época 45/200 - Perda no treinamento: 0.141943 - Acc: 95.20%
+Época 46/200 - Perda no treinamento: 0.154166 - Acc: 94.51%
+Época 47/200 - Perda no treinamento: 0.143390 - Acc: 94.60%
+Época 48/200 - Perda no treinamento: 0.137337 - Acc: 95.09%
+Época 49/200 - Perda no treinamento: 0.136237 - Acc: 95.16%
+Época 50/200 - Perda no treinamento: 0.138389 - Acc: 95.38%
+Época 51/200 - Perda no treinamento: 0.126008 - Acc: 95.58%
+Época 52/200 - Perda no treinamento: 0.141221 - Acc: 95.20%
+Época 53/200 - Perda no treinamento: 0.139783 - Acc: 95.07%
+Época 54/200 - Perda no treinamento: 0.141643 - Acc: 95.42%
+Época 55/200 - Perda no treinamento: 0.127990 - Acc: 95.44%
+Época 56/200 - Perda no treinamento: 0.125013 - Acc: 95.04%
+Época 57/200 - Perda no treinamento: 0.133024 - Acc: 94.98%
+Época 58/200 - Perda no treinamento: 0.130306 - Acc: 95.27%
+Época 59/200 - Perda no treinamento: 0.122743 - Acc: 95.58%
+Época 60/200 - Perda no treinamento: 0.122566 - Acc: 95.71%
+Época 61/200 - Perda no treinamento: 0.130644 - Acc: 95.16%
+Época 62/200 - Perda no treinamento: 0.119650 - Acc: 95.60%
+Época 63/200 - Perda no treinamento: 0.124945 - Acc: 95.67%
+Época 64/200 - Perda no treinamento: 0.121853 - Acc: 95.40%
+Época 65/200 - Perda no treinamento: 0.118985 - Acc: 95.62%
+Época 66/200 - Perda no treinamento: 0.140470 - Acc: 95.11%
+Época 67/200 - Perda no treinamento: 0.119464 - Acc: 95.73%
+Época 68/200 - Perda no treinamento: 0.120474 - Acc: 95.69%
+Época 69/200 - Perda no treinamento: 0.116722 - Acc: 96.07%
+Época 70/200 - Perda no treinamento: 0.115264 - Acc: 95.89%
+Época 71/200 - Perda no treinamento: 0.124458 - Acc: 95.71%
+Época 72/200 - Perda no treinamento: 0.116986 - Acc: 95.60%
+Época 73/200 - Perda no treinamento: 0.112663 - Acc: 95.87%
+Época 74/200 - Perda no treinamento: 0.116438 - Acc: 95.89%
+Época 75/200 - Perda no treinamento: 0.136061 - Acc: 95.02%
+Época 76/200 - Perda no treinamento: 0.121337 - Acc: 95.67%
+Época 77/200 - Perda no treinamento: 0.120398 - Acc: 95.53%
+Época 78/200 - Perda no treinamento: 0.105522 - Acc: 96.27%
+Época 79/200 - Perda no treinamento: 0.108016 - Acc: 96.27%
+Época 80/200 - Perda no treinamento: 0.110300 - Acc: 96.07%
+Época 81/200 - Perda no treinamento: 0.133167 - Acc: 95.42%
+Época 82/200 - Perda no treinamento: 0.116007 - Acc: 95.58%
+Época 83/200 - Perda no treinamento: 0.098425 - Acc: 96.20%
+Época 84/200 - Perda no treinamento: 0.113250 - Acc: 95.82%
+Época 85/200 - Perda no treinamento: 0.107549 - Acc: 96.33%
+Época 86/200 - Perda no treinamento: 0.099086 - Acc: 96.33%
+Época 87/200 - Perda no treinamento: 0.099499 - Acc: 96.51%
+Época 88/200 - Perda no treinamento: 0.109206 - Acc: 96.09%
+Época 89/200 - Perda no treinamento: 0.117860 - Acc: 95.64%
+Época 90/200 - Perda no treinamento: 0.103708 - Acc: 96.29%
+Época 91/200 - Perda no treinamento: 0.116893 - Acc: 96.02%
+Época 92/200 - Perda no treinamento: 0.100953 - Acc: 96.24%
+Época 93/200 - Perda no treinamento: 0.099538 - Acc: 96.36%
+Época 94/200 - Perda no treinamento: 0.101782 - Acc: 96.18%
+Época 95/200 - Perda no treinamento: 0.112376 - Acc: 95.91%
+Época 96/200 - Perda no treinamento: 0.124034 - Acc: 95.73%
+Época 97/200 - Perda no treinamento: 0.154240 - Acc: 94.73%
+Época 98/200 - Perda no treinamento: 0.103992 - Acc: 96.16%
+Época 99/200 - Perda no treinamento: 0.094461 - Acc: 96.78%
+Época 100/200 - Perda no treinamento: 0.098391 - Acc: 96.44%
+Época 101/200 - Perda no treinamento: 0.095404 - Acc: 96.29%
+Época 102/200 - Perda no treinamento: 0.101123 - Acc: 96.38%
+Época 103/200 - Perda no treinamento: 0.121801 - Acc: 96.11%
+Época 104/200 - Perda no treinamento: 0.106474 - Acc: 95.69%
+Época 105/200 - Perda no treinamento: 0.100870 - Acc: 96.29%
+Época 106/200 - Perda no treinamento: 0.082504 - Acc: 97.38%
+Época 107/200 - Perda no treinamento: 0.093854 - Acc: 96.58%
+Época 108/200 - Perda no treinamento: 0.127884 - Acc: 95.69%
+Época 109/200 - Perda no treinamento: 0.089789 - Acc: 96.60%
+Época 110/200 - Perda no treinamento: 0.108829 - Acc: 95.98%
+Época 111/200 - Perda no treinamento: 0.094045 - Acc: 96.67%
+Época 112/200 - Perda no treinamento: 0.097760 - Acc: 96.62%
+Época 113/200 - Perda no treinamento: 0.100132 - Acc: 96.24%
+Época 114/200 - Perda no treinamento: 0.083363 - Acc: 97.13%
+Época 115/200 - Perda no treinamento: 0.091762 - Acc: 96.64%
+Época 116/200 - Perda no treinamento: 0.084416 - Acc: 97.24%
+Época 117/200 - Perda no treinamento: 0.100403 - Acc: 96.53%
+Época 118/200 - Perda no treinamento: 0.098457 - Acc: 96.38%
+Época 119/200 - Perda no treinamento: 0.118279 - Acc: 95.60%
+Época 120/200 - Perda no treinamento: 0.095682 - Acc: 96.49%
+Época 121/200 - Perda no treinamento: 0.087730 - Acc: 96.71%
+Época 122/200 - Perda no treinamento: 0.105930 - Acc: 96.11%
+Época 123/200 - Perda no treinamento: 0.092043 - Acc: 96.56%
+Época 124/200 - Perda no treinamento: 0.089301 - Acc: 96.60%
+Época 125/200 - Perda no treinamento: 0.116045 - Acc: 96.11%
+Época 126/200 - Perda no treinamento: 0.134041 - Acc: 95.36%
+Época 127/200 - Perda no treinamento: 0.096530 - Acc: 96.11%
+Época 128/200 - Perda no treinamento: 0.090843 - Acc: 96.67%
+Época 129/200 - Perda no treinamento: 0.089157 - Acc: 96.69%
+Época 130/200 - Perda no treinamento: 0.090949 - Acc: 96.53%
+Época 131/200 - Perda no treinamento: 0.106364 - Acc: 96.09%
+Época 132/200 - Perda no treinamento: 0.093121 - Acc: 96.22%
+Época 133/200 - Perda no treinamento: 0.088780 - Acc: 96.89%
+Época 134/200 - Perda no treinamento: 0.083895 - Acc: 96.89%
+Época 135/200 - Perda no treinamento: 0.100076 - Acc: 96.49%
+Época 136/200 - Perda no treinamento: 0.093744 - Acc: 96.80%
+Época 137/200 - Perda no treinamento: 0.088034 - Acc: 96.53%
+Época 138/200 - Perda no treinamento: 0.077490 - Acc: 96.78%
+Época 139/200 - Perda no treinamento: 0.082000 - Acc: 97.13%
+Época 140/200 - Perda no treinamento: 0.093963 - Acc: 96.71%
+Época 141/200 - Perda no treinamento: 0.148483 - Acc: 96.56%
+Época 142/200 - Perda no treinamento: 0.101038 - Acc: 96.78%
+Época 143/200 - Perda no treinamento: 0.093734 - Acc: 96.38%
+Época 144/200 - Perda no treinamento: 0.086026 - Acc: 96.91%
+Época 145/200 - Perda no treinamento: 0.092014 - Acc: 96.69%
+Época 146/200 - Perda no treinamento: 0.079812 - Acc: 97.00%
+Época 147/200 - Perda no treinamento: 0.085412 - Acc: 96.93%
+Época 148/200 - Perda no treinamento: 0.076807 - Acc: 96.93%
+Época 149/200 - Perda no treinamento: 0.087245 - Acc: 96.82%
+Época 150/200 - Perda no treinamento: 0.217004 - Acc: 95.00%
+Época 151/200 - Perda no treinamento: 0.092228 - Acc: 96.64%
+Época 152/200 - Perda no treinamento: 0.089173 - Acc: 96.64%
+Época 153/200 - Perda no treinamento: 0.077960 - Acc: 97.02%
+Época 154/200 - Perda no treinamento: 0.079239 - Acc: 97.27%
+Época 155/200 - Perda no treinamento: 0.090169 - Acc: 96.84%
+Época 156/200 - Perda no treinamento: 0.091672 - Acc: 96.62%
+Época 157/200 - Perda no treinamento: 0.081744 - Acc: 96.76%
+Época 158/200 - Perda no treinamento: 0.085773 - Acc: 96.62%
+Época 159/200 - Perda no treinamento: 0.090873 - Acc: 96.76%
+Época 160/200 - Perda no treinamento: 0.081404 - Acc: 97.02%
+Época 161/200 - Perda no treinamento: 0.094866 - Acc: 96.40%
+Época 162/200 - Perda no treinamento: 0.080798 - Acc: 97.22%
+Época 163/200 - Perda no treinamento: 0.084486 - Acc: 97.16%
+Época 164/200 - Perda no treinamento: 0.167758 - Acc: 96.22%
+Época 165/200 - Perda no treinamento: 0.089461 - Acc: 96.96%
+Época 166/200 - Perda no treinamento: 0.107783 - Acc: 96.62%
+Época 167/200 - Perda no treinamento: 0.091079 - Acc: 96.84%
+Época 168/200 - Perda no treinamento: 0.092221 - Acc: 96.84%
+Época 169/200 - Perda no treinamento: 0.083369 - Acc: 97.02%
+Época 170/200 - Perda no treinamento: 0.086912 - Acc: 96.33%
+Época 171/200 - Perda no treinamento: 0.084235 - Acc: 96.62%
+Época 172/200 - Perda no treinamento: 0.079516 - Acc: 96.96%
+Época 173/200 - Perda no treinamento: 0.078340 - Acc: 97.29%
+Época 174/200 - Perda no treinamento: 0.074410 - Acc: 97.16%
+Época 175/200 - Perda no treinamento: 0.085377 - Acc: 96.93%
+Época 176/200 - Perda no treinamento: 0.090031 - Acc: 97.04%
+Época 177/200 - Perda no treinamento: 0.086962 - Acc: 96.60%
+Época 178/200 - Perda no treinamento: 0.081315 - Acc: 96.76%
+Época 179/200 - Perda no treinamento: 0.102407 - Acc: 96.82%
+Época 180/200 - Perda no treinamento: 0.080091 - Acc: 97.00%
+Época 181/200 - Perda no treinamento: 0.082646 - Acc: 96.80%
+Época 182/200 - Perda no treinamento: 0.075696 - Acc: 97.22%
+Época 183/200 - Perda no treinamento: 0.078646 - Acc: 97.13%
+Época 184/200 - Perda no treinamento: 0.185758 - Acc: 96.36%
+Época 185/200 - Perda no treinamento: 0.091793 - Acc: 96.67%
+Época 186/200 - Perda no treinamento: 0.086546 - Acc: 96.49%
+Época 187/200 - Perda no treinamento: 0.084559 - Acc: 96.89%
+Época 188/200 - Perda no treinamento: 0.081058 - Acc: 96.89%
+Época 189/200 - Perda no treinamento: 0.093637 - Acc: 96.67%
+Época 190/200 - Perda no treinamento: 0.108557 - Acc: 95.87%
+Época 191/200 - Perda no treinamento: 0.082114 - Acc: 97.07%
+Época 192/200 - Perda no treinamento: 0.079046 - Acc: 97.09%
+Época 193/200 - Perda no treinamento: 0.079231 - Acc: 96.87%
+Época 194/200 - Perda no treinamento: 0.072291 - Acc: 97.22%
+Época 195/200 - Perda no treinamento: 0.083797 - Acc: 96.80%
+Época 196/200 - Perda no treinamento: 0.076729 - Acc: 97.24%
+Época 197/200 - Perda no treinamento: 0.079868 - Acc: 96.96%
+Época 198/200 - Perda no treinamento: 0.089632 - Acc: 96.76%
+Época 199/200 - Perda no treinamento: 0.078272 - Acc: 97.18%
+Época 200/200 - Perda no treinamento: 0.072975 - Acc: 97.20%
+
+Acurácia para o Fold 4: 95.80%
+Precisão para o Fold 4: 95.84%
+Recall para o Fold 4: 95.80%
+F1 para o Fold 4: 95.77%
+
+!!!Teste finalizado!!!
+
+Fold 5/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1507
+Pneumonia: 1501
+Tuberculose: 1492
+
+Época 1/200 - Perda no treinamento: 0.791544 - Acc: 74.67%
+Época 2/200 - Perda no treinamento: 0.417356 - Acc: 84.07%
+Época 3/200 - Perda no treinamento: 0.376867 - Acc: 85.27%
+Época 4/200 - Perda no treinamento: 0.317098 - Acc: 87.80%
+Época 5/200 - Perda no treinamento: 0.283464 - Acc: 89.00%
+Época 6/200 - Perda no treinamento: 0.267442 - Acc: 90.02%
+Época 7/200 - Perda no treinamento: 0.244662 - Acc: 90.56%
+Época 8/200 - Perda no treinamento: 0.259600 - Acc: 90.51%
+Época 9/200 - Perda no treinamento: 0.231441 - Acc: 90.98%
+Época 10/200 - Perda no treinamento: 0.244004 - Acc: 91.33%
+Época 11/200 - Perda no treinamento: 0.227902 - Acc: 91.33%
+Época 12/200 - Perda no treinamento: 0.229942 - Acc: 91.40%
+Época 13/200 - Perda no treinamento: 0.224770 - Acc: 91.89%
+Época 14/200 - Perda no treinamento: 0.218076 - Acc: 91.64%
+Época 15/200 - Perda no treinamento: 0.217232 - Acc: 92.16%
+Época 16/200 - Perda no treinamento: 0.194558 - Acc: 93.13%
+Época 17/200 - Perda no treinamento: 0.205186 - Acc: 92.53%
+Época 18/200 - Perda no treinamento: 0.192236 - Acc: 92.96%
+Época 19/200 - Perda no treinamento: 0.194916 - Acc: 92.84%
+Época 20/200 - Perda no treinamento: 0.202108 - Acc: 92.71%
+Época 21/200 - Perda no treinamento: 0.200065 - Acc: 92.56%
+Época 22/200 - Perda no treinamento: 0.187371 - Acc: 93.40%
+Época 23/200 - Perda no treinamento: 0.180612 - Acc: 93.64%
+Época 24/200 - Perda no treinamento: 0.191524 - Acc: 92.93%
+Época 25/200 - Perda no treinamento: 0.177311 - Acc: 93.44%
+Época 26/200 - Perda no treinamento: 0.173199 - Acc: 93.62%
+Época 27/200 - Perda no treinamento: 0.169447 - Acc: 93.69%
+Época 28/200 - Perda no treinamento: 0.172852 - Acc: 93.60%
+Época 29/200 - Perda no treinamento: 0.174291 - Acc: 93.44%
+Época 30/200 - Perda no treinamento: 0.178224 - Acc: 93.87%
+Época 31/200 - Perda no treinamento: 0.178102 - Acc: 93.64%
+Época 32/200 - Perda no treinamento: 0.157334 - Acc: 94.22%
+Época 33/200 - Perda no treinamento: 0.160393 - Acc: 94.82%
+Época 34/200 - Perda no treinamento: 0.170437 - Acc: 93.87%
+Época 35/200 - Perda no treinamento: 0.166353 - Acc: 93.87%
+Época 36/200 - Perda no treinamento: 0.162251 - Acc: 94.29%
+Época 37/200 - Perda no treinamento: 0.166614 - Acc: 93.98%
+Época 38/200 - Perda no treinamento: 0.162247 - Acc: 94.18%
+Época 39/200 - Perda no treinamento: 0.171103 - Acc: 93.82%
+Época 40/200 - Perda no treinamento: 0.153907 - Acc: 94.33%
+Época 41/200 - Perda no treinamento: 0.146844 - Acc: 94.67%
+Época 42/200 - Perda no treinamento: 0.139075 - Acc: 95.11%
+Época 43/200 - Perda no treinamento: 0.157122 - Acc: 94.29%
+Época 44/200 - Perda no treinamento: 0.144875 - Acc: 95.16%
+Época 45/200 - Perda no treinamento: 0.192668 - Acc: 93.69%
+Época 46/200 - Perda no treinamento: 0.155069 - Acc: 94.47%
+Época 47/200 - Perda no treinamento: 0.132779 - Acc: 95.31%
+Época 48/200 - Perda no treinamento: 0.145011 - Acc: 94.96%
+Época 49/200 - Perda no treinamento: 0.139106 - Acc: 95.18%
+Época 50/200 - Perda no treinamento: 0.143241 - Acc: 94.58%
+Época 51/200 - Perda no treinamento: 0.141316 - Acc: 95.22%
+Época 52/200 - Perda no treinamento: 0.137988 - Acc: 95.09%
+Época 53/200 - Perda no treinamento: 0.128058 - Acc: 95.44%
+Época 54/200 - Perda no treinamento: 0.141326 - Acc: 94.56%
+Época 55/200 - Perda no treinamento: 0.140350 - Acc: 95.02%
+Época 56/200 - Perda no treinamento: 0.135843 - Acc: 94.73%
+Época 57/200 - Perda no treinamento: 0.143014 - Acc: 94.84%
+Época 58/200 - Perda no treinamento: 0.117674 - Acc: 95.47%
+Época 59/200 - Perda no treinamento: 0.134508 - Acc: 95.31%
+Época 60/200 - Perda no treinamento: 0.135503 - Acc: 95.47%
+Época 61/200 - Perda no treinamento: 0.129317 - Acc: 95.42%
+Época 62/200 - Perda no treinamento: 0.128485 - Acc: 95.20%
+Época 63/200 - Perda no treinamento: 0.123165 - Acc: 95.58%
+Época 64/200 - Perda no treinamento: 0.130631 - Acc: 95.38%
+Época 65/200 - Perda no treinamento: 0.128099 - Acc: 95.51%
+Época 66/200 - Perda no treinamento: 0.124754 - Acc: 95.22%
+Época 67/200 - Perda no treinamento: 0.134861 - Acc: 95.24%
+Época 68/200 - Perda no treinamento: 0.136461 - Acc: 94.93%
+Época 69/200 - Perda no treinamento: 0.120241 - Acc: 95.51%
+Época 70/200 - Perda no treinamento: 0.123741 - Acc: 95.56%
+Época 71/200 - Perda no treinamento: 0.120871 - Acc: 95.82%
+Época 72/200 - Perda no treinamento: 0.122882 - Acc: 95.78%
+Época 73/200 - Perda no treinamento: 0.121340 - Acc: 95.78%
+Época 74/200 - Perda no treinamento: 0.122538 - Acc: 95.64%
+Época 75/200 - Perda no treinamento: 0.125458 - Acc: 95.36%
+Época 76/200 - Perda no treinamento: 0.119879 - Acc: 95.49%
+Época 77/200 - Perda no treinamento: 0.112598 - Acc: 95.91%
+Época 78/200 - Perda no treinamento: 0.112850 - Acc: 96.02%
+Época 79/200 - Perda no treinamento: 0.115264 - Acc: 95.71%
+Época 80/200 - Perda no treinamento: 0.128218 - Acc: 95.89%
+Época 81/200 - Perda no treinamento: 0.119535 - Acc: 95.40%
+Época 82/200 - Perda no treinamento: 0.114026 - Acc: 95.96%
+Época 83/200 - Perda no treinamento: 0.111138 - Acc: 95.96%
+Época 84/200 - Perda no treinamento: 0.131085 - Acc: 95.33%
+Época 85/200 - Perda no treinamento: 0.120378 - Acc: 95.87%
+Época 86/200 - Perda no treinamento: 0.153311 - Acc: 95.11%
+Época 87/200 - Perda no treinamento: 0.112114 - Acc: 95.98%
+Época 88/200 - Perda no treinamento: 0.115991 - Acc: 95.98%
+Época 89/200 - Perda no treinamento: 0.102553 - Acc: 96.40%
+Época 90/200 - Perda no treinamento: 0.106335 - Acc: 96.38%
+Época 91/200 - Perda no treinamento: 0.103155 - Acc: 96.09%
+Época 92/200 - Perda no treinamento: 0.112038 - Acc: 96.24%
+Época 93/200 - Perda no treinamento: 0.105505 - Acc: 95.91%
+Época 94/200 - Perda no treinamento: 0.105251 - Acc: 96.24%
+Época 95/200 - Perda no treinamento: 0.110597 - Acc: 96.20%
+Época 96/200 - Perda no treinamento: 0.150281 - Acc: 95.40%
+Época 97/200 - Perda no treinamento: 0.116873 - Acc: 95.80%
+Época 98/200 - Perda no treinamento: 0.114488 - Acc: 95.98%
+Época 99/200 - Perda no treinamento: 0.115683 - Acc: 95.56%
+Época 100/200 - Perda no treinamento: 0.108423 - Acc: 95.91%
+Época 101/200 - Perda no treinamento: 0.109093 - Acc: 95.84%
+Época 102/200 - Perda no treinamento: 0.108400 - Acc: 96.16%
+Época 103/200 - Perda no treinamento: 0.106060 - Acc: 96.31%
+Época 104/200 - Perda no treinamento: 0.105374 - Acc: 96.18%
+Época 105/200 - Perda no treinamento: 0.104923 - Acc: 96.36%
+Época 106/200 - Perda no treinamento: 0.122898 - Acc: 95.58%
+Época 107/200 - Perda no treinamento: 0.102464 - Acc: 96.40%
+Época 108/200 - Perda no treinamento: 0.096459 - Acc: 96.60%
+Época 109/200 - Perda no treinamento: 0.107014 - Acc: 95.93%
+Época 110/200 - Perda no treinamento: 0.097090 - Acc: 96.33%
+Época 111/200 - Perda no treinamento: 0.098739 - Acc: 96.40%
+Época 112/200 - Perda no treinamento: 0.103173 - Acc: 96.02%
+Época 113/200 - Perda no treinamento: 0.104708 - Acc: 96.04%
+Época 114/200 - Perda no treinamento: 0.121269 - Acc: 95.42%
+Época 115/200 - Perda no treinamento: 0.096980 - Acc: 96.47%
+Época 116/200 - Perda no treinamento: 0.100017 - Acc: 96.67%
+Época 117/200 - Perda no treinamento: 0.100862 - Acc: 96.49%
+Época 118/200 - Perda no treinamento: 0.105511 - Acc: 96.13%
+Época 119/200 - Perda no treinamento: 0.102177 - Acc: 96.53%
+Época 120/200 - Perda no treinamento: 0.104124 - Acc: 96.60%
+Época 121/200 - Perda no treinamento: 0.091478 - Acc: 96.71%
+Época 122/200 - Perda no treinamento: 0.090847 - Acc: 96.64%
+Época 123/200 - Perda no treinamento: 0.106231 - Acc: 96.04%
+Época 124/200 - Perda no treinamento: 0.101593 - Acc: 96.44%
+Época 125/200 - Perda no treinamento: 0.109106 - Acc: 96.47%
+Época 126/200 - Perda no treinamento: 0.103664 - Acc: 96.44%
+Época 127/200 - Perda no treinamento: 0.093184 - Acc: 96.62%
+Época 128/200 - Perda no treinamento: 0.101354 - Acc: 96.22%
+Época 129/200 - Perda no treinamento: 0.094494 - Acc: 96.56%
+Época 130/200 - Perda no treinamento: 0.111827 - Acc: 96.07%
+Época 131/200 - Perda no treinamento: 0.173818 - Acc: 96.38%
+Época 132/200 - Perda no treinamento: 0.088148 - Acc: 96.71%
+Época 133/200 - Perda no treinamento: 0.091979 - Acc: 96.67%
+Época 134/200 - Perda no treinamento: 0.093191 - Acc: 96.53%
+Época 135/200 - Perda no treinamento: 0.086625 - Acc: 96.67%
+Época 136/200 - Perda no treinamento: 0.094859 - Acc: 96.56%
+Época 137/200 - Perda no treinamento: 0.086763 - Acc: 96.89%
+Época 138/200 - Perda no treinamento: 0.108890 - Acc: 96.49%
+Época 139/200 - Perda no treinamento: 0.087008 - Acc: 96.67%
+Época 140/200 - Perda no treinamento: 0.087122 - Acc: 96.93%
+Época 141/200 - Perda no treinamento: 0.081795 - Acc: 96.87%
+Época 142/200 - Perda no treinamento: 0.086868 - Acc: 97.16%
+Época 143/200 - Perda no treinamento: 0.081379 - Acc: 96.96%
+Época 144/200 - Perda no treinamento: 0.085220 - Acc: 96.80%
+Época 145/200 - Perda no treinamento: 0.085933 - Acc: 96.71%
+Época 146/200 - Perda no treinamento: 0.112974 - Acc: 96.16%
+Época 147/200 - Perda no treinamento: 0.095477 - Acc: 96.60%
+Época 148/200 - Perda no treinamento: 0.086704 - Acc: 96.64%
+Época 149/200 - Perda no treinamento: 0.080652 - Acc: 96.98%
+Época 150/200 - Perda no treinamento: 0.084870 - Acc: 97.04%
+Época 151/200 - Perda no treinamento: 0.079753 - Acc: 97.13%
+Época 152/200 - Perda no treinamento: 0.079106 - Acc: 96.84%
+Época 153/200 - Perda no treinamento: 0.085683 - Acc: 96.67%
+Época 154/200 - Perda no treinamento: 0.088615 - Acc: 96.80%
+Época 155/200 - Perda no treinamento: 0.113563 - Acc: 95.96%
+Época 156/200 - Perda no treinamento: 0.085621 - Acc: 96.91%
+Época 157/200 - Perda no treinamento: 0.111431 - Acc: 96.36%
+Época 158/200 - Perda no treinamento: 0.103420 - Acc: 97.00%
+Época 159/200 - Perda no treinamento: 0.098476 - Acc: 96.27%
+Época 160/200 - Perda no treinamento: 0.097998 - Acc: 96.47%
+Época 161/200 - Perda no treinamento: 0.145938 - Acc: 95.78%
+Época 162/200 - Perda no treinamento: 0.092144 - Acc: 96.76%
+Época 163/200 - Perda no treinamento: 0.090001 - Acc: 96.62%
+Época 164/200 - Perda no treinamento: 0.076541 - Acc: 97.33%
+Época 165/200 - Perda no treinamento: 0.079718 - Acc: 97.02%
+Época 166/200 - Perda no treinamento: 0.075497 - Acc: 97.11%
+Época 167/200 - Perda no treinamento: 0.084821 - Acc: 96.89%
+Época 168/200 - Perda no treinamento: 0.077631 - Acc: 97.33%
+Época 169/200 - Perda no treinamento: 0.075425 - Acc: 96.89%
+Época 170/200 - Perda no treinamento: 0.090808 - Acc: 96.87%
+Época 171/200 - Perda no treinamento: 0.084989 - Acc: 96.87%
+Época 172/200 - Perda no treinamento: 0.085706 - Acc: 96.93%
+Época 173/200 - Perda no treinamento: 0.079114 - Acc: 96.76%
+Época 174/200 - Perda no treinamento: 0.078758 - Acc: 97.00%
+Época 175/200 - Perda no treinamento: 0.080842 - Acc: 96.67%
+Época 176/200 - Perda no treinamento: 0.084125 - Acc: 97.11%
+Época 177/200 - Perda no treinamento: 0.079502 - Acc: 97.07%
+Época 178/200 - Perda no treinamento: 0.093452 - Acc: 96.76%
+Época 179/200 - Perda no treinamento: 0.089433 - Acc: 96.82%
+Época 180/200 - Perda no treinamento: 0.102610 - Acc: 96.91%
+Época 181/200 - Perda no treinamento: 0.079927 - Acc: 96.96%
+Época 182/200 - Perda no treinamento: 0.083254 - Acc: 96.96%
+Época 183/200 - Perda no treinamento: 0.069316 - Acc: 97.73%
+Época 184/200 - Perda no treinamento: 0.105239 - Acc: 96.38%
+Época 185/200 - Perda no treinamento: 0.083344 - Acc: 97.13%
+Época 186/200 - Perda no treinamento: 0.152028 - Acc: 95.56%
+Época 187/200 - Perda no treinamento: 0.089194 - Acc: 96.80%
+Época 188/200 - Perda no treinamento: 0.076045 - Acc: 97.40%
+Época 189/200 - Perda no treinamento: 0.072564 - Acc: 97.49%
+Época 190/200 - Perda no treinamento: 0.079182 - Acc: 96.98%
+Época 191/200 - Perda no treinamento: 0.087485 - Acc: 96.96%
+Época 192/200 - Perda no treinamento: 0.157135 - Acc: 96.73%
+Época 193/200 - Perda no treinamento: 0.086640 - Acc: 96.82%
+Época 194/200 - Perda no treinamento: 0.085341 - Acc: 96.80%
+Época 195/200 - Perda no treinamento: 0.078892 - Acc: 96.91%
+Época 196/200 - Perda no treinamento: 0.097916 - Acc: 96.84%
+Época 197/200 - Perda no treinamento: 0.076912 - Acc: 97.22%
+Época 198/200 - Perda no treinamento: 0.084625 - Acc: 96.91%
+Época 199/200 - Perda no treinamento: 0.077099 - Acc: 97.16%
+Época 200/200 - Perda no treinamento: 0.079434 - Acc: 97.02%
+
+Acurácia para o Fold 5: 97.00%
+Precisão para o Fold 5: 97.04%
+Recall para o Fold 5: 97.00%
+F1 para o Fold 5: 97.01%
+
+!!!Teste finalizado!!!
+
+Fold 6/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1508
+Pneumonia: 1504
+Tuberculose: 1488
+
+Época 1/200 - Perda no treinamento: 1.035282 - Acc: 72.80%
+Época 2/200 - Perda no treinamento: 0.427924 - Acc: 83.73%
+Época 3/200 - Perda no treinamento: 0.343702 - Acc: 87.31%
+Época 4/200 - Perda no treinamento: 0.317605 - Acc: 87.49%
+Época 5/200 - Perda no treinamento: 0.279785 - Acc: 89.38%
+Época 6/200 - Perda no treinamento: 0.284165 - Acc: 89.33%
+Época 7/200 - Perda no treinamento: 0.256478 - Acc: 90.11%
+Época 8/200 - Perda no treinamento: 0.250099 - Acc: 90.27%
+Época 9/200 - Perda no treinamento: 0.272505 - Acc: 90.18%
+Época 10/200 - Perda no treinamento: 0.236395 - Acc: 91.62%
+Época 11/200 - Perda no treinamento: 0.250351 - Acc: 90.89%
+Época 12/200 - Perda no treinamento: 0.223565 - Acc: 92.04%
+Época 13/200 - Perda no treinamento: 0.221635 - Acc: 91.73%
+Época 14/200 - Perda no treinamento: 0.204329 - Acc: 92.36%
+Época 15/200 - Perda no treinamento: 0.204687 - Acc: 92.38%
+Época 16/200 - Perda no treinamento: 0.196411 - Acc: 92.60%
+Época 17/200 - Perda no treinamento: 0.218560 - Acc: 92.20%
+Época 18/200 - Perda no treinamento: 0.194297 - Acc: 93.07%
+Época 19/200 - Perda no treinamento: 0.198632 - Acc: 92.89%
+Época 20/200 - Perda no treinamento: 0.184317 - Acc: 93.20%
+Época 21/200 - Perda no treinamento: 0.180329 - Acc: 93.18%
+Época 22/200 - Perda no treinamento: 0.183542 - Acc: 93.36%
+Época 23/200 - Perda no treinamento: 0.182821 - Acc: 93.16%
+Época 24/200 - Perda no treinamento: 0.185010 - Acc: 93.53%
+Época 25/200 - Perda no treinamento: 0.170432 - Acc: 94.53%
+Época 26/200 - Perda no treinamento: 0.189394 - Acc: 93.13%
+Época 27/200 - Perda no treinamento: 0.161675 - Acc: 93.93%
+Época 28/200 - Perda no treinamento: 0.165591 - Acc: 94.13%
+Época 29/200 - Perda no treinamento: 0.190171 - Acc: 92.93%
+Época 30/200 - Perda no treinamento: 0.164578 - Acc: 94.36%
+Época 31/200 - Perda no treinamento: 0.159029 - Acc: 94.00%
+Época 32/200 - Perda no treinamento: 0.172781 - Acc: 94.13%
+Época 33/200 - Perda no treinamento: 0.150857 - Acc: 94.40%
+Época 34/200 - Perda no treinamento: 0.164869 - Acc: 94.04%
+Época 35/200 - Perda no treinamento: 0.147751 - Acc: 94.62%
+Época 36/200 - Perda no treinamento: 0.141630 - Acc: 94.78%
+Época 37/200 - Perda no treinamento: 0.161880 - Acc: 94.64%
+Época 38/200 - Perda no treinamento: 0.165767 - Acc: 93.84%
+Época 39/200 - Perda no treinamento: 0.162815 - Acc: 94.11%
+Época 40/200 - Perda no treinamento: 0.156773 - Acc: 94.60%
+Época 41/200 - Perda no treinamento: 0.139970 - Acc: 94.96%
+Época 42/200 - Perda no treinamento: 0.158003 - Acc: 94.36%
+Época 43/200 - Perda no treinamento: 0.136823 - Acc: 95.04%
+Época 44/200 - Perda no treinamento: 0.136339 - Acc: 95.29%
+Época 45/200 - Perda no treinamento: 0.145608 - Acc: 94.96%
+Época 46/200 - Perda no treinamento: 0.158106 - Acc: 94.98%
+Época 47/200 - Perda no treinamento: 0.146223 - Acc: 94.58%
+Época 48/200 - Perda no treinamento: 0.145164 - Acc: 94.62%
+Época 49/200 - Perda no treinamento: 0.129354 - Acc: 95.49%
+Época 50/200 - Perda no treinamento: 0.155597 - Acc: 94.73%
+Época 51/200 - Perda no treinamento: 0.155110 - Acc: 94.47%
+Época 52/200 - Perda no treinamento: 0.140102 - Acc: 95.36%
+Época 53/200 - Perda no treinamento: 0.135375 - Acc: 95.11%
+Época 54/200 - Perda no treinamento: 0.128262 - Acc: 95.24%
+Época 55/200 - Perda no treinamento: 0.133764 - Acc: 95.22%
+Época 56/200 - Perda no treinamento: 0.129778 - Acc: 95.53%
+Época 57/200 - Perda no treinamento: 0.131102 - Acc: 95.64%
+Época 58/200 - Perda no treinamento: 0.154066 - Acc: 95.29%
+Época 59/200 - Perda no treinamento: 0.144382 - Acc: 94.96%
+Época 60/200 - Perda no treinamento: 0.124243 - Acc: 95.80%
+Época 61/200 - Perda no treinamento: 0.124464 - Acc: 95.53%
+Época 62/200 - Perda no treinamento: 0.126230 - Acc: 95.53%
+Época 63/200 - Perda no treinamento: 0.119223 - Acc: 95.20%
+Época 64/200 - Perda no treinamento: 0.120360 - Acc: 95.40%
+Época 65/200 - Perda no treinamento: 0.112736 - Acc: 95.78%
+Época 66/200 - Perda no treinamento: 0.129453 - Acc: 95.27%
+Época 67/200 - Perda no treinamento: 0.129775 - Acc: 95.38%
+Época 68/200 - Perda no treinamento: 0.121982 - Acc: 95.33%
+Época 69/200 - Perda no treinamento: 0.122474 - Acc: 95.84%
+Época 70/200 - Perda no treinamento: 0.113849 - Acc: 96.16%
+Época 71/200 - Perda no treinamento: 0.131805 - Acc: 94.87%
+Época 72/200 - Perda no treinamento: 0.114841 - Acc: 96.13%
+Época 73/200 - Perda no treinamento: 0.104816 - Acc: 95.82%
+Época 74/200 - Perda no treinamento: 0.125101 - Acc: 95.29%
+Época 75/200 - Perda no treinamento: 0.112423 - Acc: 95.91%
+Época 76/200 - Perda no treinamento: 0.112137 - Acc: 96.04%
+Época 77/200 - Perda no treinamento: 0.117522 - Acc: 95.67%
+Época 78/200 - Perda no treinamento: 0.143089 - Acc: 95.20%
+Época 79/200 - Perda no treinamento: 0.126829 - Acc: 95.33%
+Época 80/200 - Perda no treinamento: 0.113429 - Acc: 95.84%
+Época 81/200 - Perda no treinamento: 0.106257 - Acc: 96.29%
+Época 82/200 - Perda no treinamento: 0.109734 - Acc: 96.07%
+Época 83/200 - Perda no treinamento: 0.106636 - Acc: 95.87%
+Época 84/200 - Perda no treinamento: 0.117819 - Acc: 96.22%
+Época 85/200 - Perda no treinamento: 0.107816 - Acc: 96.13%
+Época 86/200 - Perda no treinamento: 0.105936 - Acc: 96.18%
+Época 87/200 - Perda no treinamento: 0.097323 - Acc: 96.67%
+Época 88/200 - Perda no treinamento: 0.106331 - Acc: 96.02%
+Época 89/200 - Perda no treinamento: 0.110217 - Acc: 96.09%
+Época 90/200 - Perda no treinamento: 0.098470 - Acc: 96.42%
+Época 91/200 - Perda no treinamento: 0.112783 - Acc: 95.71%
+Época 92/200 - Perda no treinamento: 0.123028 - Acc: 95.53%
+Época 93/200 - Perda no treinamento: 0.106310 - Acc: 96.29%
+Época 94/200 - Perda no treinamento: 0.110723 - Acc: 95.69%
+Época 95/200 - Perda no treinamento: 0.104519 - Acc: 96.24%
+Época 96/200 - Perda no treinamento: 0.123500 - Acc: 95.84%
+Época 97/200 - Perda no treinamento: 0.107235 - Acc: 96.27%
+Época 98/200 - Perda no treinamento: 0.097867 - Acc: 96.44%
+Época 99/200 - Perda no treinamento: 0.103299 - Acc: 96.40%
+Época 100/200 - Perda no treinamento: 0.109208 - Acc: 96.00%
+Época 101/200 - Perda no treinamento: 0.101382 - Acc: 96.36%
+Época 102/200 - Perda no treinamento: 0.101108 - Acc: 96.42%
+Época 103/200 - Perda no treinamento: 0.110970 - Acc: 95.87%
+Época 104/200 - Perda no treinamento: 0.116170 - Acc: 95.89%
+Época 105/200 - Perda no treinamento: 0.095948 - Acc: 96.36%
+Época 106/200 - Perda no treinamento: 0.100306 - Acc: 96.44%
+Época 107/200 - Perda no treinamento: 0.090657 - Acc: 96.76%
+Época 108/200 - Perda no treinamento: 0.104209 - Acc: 95.93%
+Época 109/200 - Perda no treinamento: 0.124883 - Acc: 96.18%
+Época 110/200 - Perda no treinamento: 0.104878 - Acc: 96.16%
+Época 111/200 - Perda no treinamento: 0.096260 - Acc: 96.76%
+Época 112/200 - Perda no treinamento: 0.097628 - Acc: 96.20%
+Época 113/200 - Perda no treinamento: 0.092375 - Acc: 96.51%
+Época 114/200 - Perda no treinamento: 0.091183 - Acc: 96.87%
+Época 115/200 - Perda no treinamento: 0.096866 - Acc: 96.38%
+Época 116/200 - Perda no treinamento: 0.099601 - Acc: 96.42%
+Época 117/200 - Perda no treinamento: 0.101250 - Acc: 95.87%
+Época 118/200 - Perda no treinamento: 0.091189 - Acc: 96.51%
+Época 119/200 - Perda no treinamento: 0.100228 - Acc: 96.47%
+Época 120/200 - Perda no treinamento: 0.103431 - Acc: 96.31%
+Época 121/200 - Perda no treinamento: 0.091824 - Acc: 96.49%
+Época 122/200 - Perda no treinamento: 0.095863 - Acc: 96.47%
+Época 123/200 - Perda no treinamento: 0.120959 - Acc: 96.13%
+Época 124/200 - Perda no treinamento: 0.095189 - Acc: 96.49%
+Época 125/200 - Perda no treinamento: 0.109144 - Acc: 96.56%
+Época 126/200 - Perda no treinamento: 0.089551 - Acc: 96.67%
+Época 127/200 - Perda no treinamento: 0.097890 - Acc: 96.49%
+Época 128/200 - Perda no treinamento: 0.094941 - Acc: 96.29%
+Época 129/200 - Perda no treinamento: 0.084746 - Acc: 96.89%
+Época 130/200 - Perda no treinamento: 0.091817 - Acc: 96.49%
+Época 131/200 - Perda no treinamento: 0.089626 - Acc: 96.80%
+Época 132/200 - Perda no treinamento: 0.088773 - Acc: 96.82%
+Época 133/200 - Perda no treinamento: 0.092311 - Acc: 96.56%
+Época 134/200 - Perda no treinamento: 0.079957 - Acc: 97.27%
+Época 135/200 - Perda no treinamento: 0.103125 - Acc: 96.51%
+Época 136/200 - Perda no treinamento: 0.094097 - Acc: 96.58%
+Época 137/200 - Perda no treinamento: 0.127318 - Acc: 95.71%
+Época 138/200 - Perda no treinamento: 0.106047 - Acc: 96.20%
+Época 139/200 - Perda no treinamento: 0.079317 - Acc: 97.33%
+Época 140/200 - Perda no treinamento: 0.090957 - Acc: 96.51%
+Época 141/200 - Perda no treinamento: 0.085942 - Acc: 96.64%
+Época 142/200 - Perda no treinamento: 0.091732 - Acc: 96.38%
+Época 143/200 - Perda no treinamento: 0.088556 - Acc: 96.69%
+Época 144/200 - Perda no treinamento: 0.090187 - Acc: 96.69%
+Época 145/200 - Perda no treinamento: 0.081347 - Acc: 96.84%
+Época 146/200 - Perda no treinamento: 0.097907 - Acc: 96.56%
+Época 147/200 - Perda no treinamento: 0.086370 - Acc: 96.67%
+Época 148/200 - Perda no treinamento: 0.089492 - Acc: 96.58%
+Época 149/200 - Perda no treinamento: 0.094387 - Acc: 96.44%
+Época 150/200 - Perda no treinamento: 0.081884 - Acc: 96.80%
+Época 151/200 - Perda no treinamento: 0.096037 - Acc: 96.33%
+Época 152/200 - Perda no treinamento: 0.094837 - Acc: 96.89%
+Época 153/200 - Perda no treinamento: 0.079893 - Acc: 97.00%
+Época 154/200 - Perda no treinamento: 0.084884 - Acc: 96.82%
+Época 155/200 - Perda no treinamento: 0.083933 - Acc: 96.62%
+Época 156/200 - Perda no treinamento: 0.080510 - Acc: 97.09%
+Época 157/200 - Perda no treinamento: 0.088480 - Acc: 96.71%
+Época 158/200 - Perda no treinamento: 0.148294 - Acc: 96.31%
+Época 159/200 - Perda no treinamento: 0.094831 - Acc: 96.78%
+Época 160/200 - Perda no treinamento: 0.152328 - Acc: 95.78%
+Época 161/200 - Perda no treinamento: 0.093406 - Acc: 96.38%
+Época 162/200 - Perda no treinamento: 0.086372 - Acc: 96.76%
+Época 163/200 - Perda no treinamento: 0.086090 - Acc: 96.76%
+Época 164/200 - Perda no treinamento: 0.087026 - Acc: 96.49%
+Época 165/200 - Perda no treinamento: 0.084343 - Acc: 96.98%
+Época 166/200 - Perda no treinamento: 0.306494 - Acc: 93.84%
+Época 167/200 - Perda no treinamento: 0.106983 - Acc: 96.13%
+Época 168/200 - Perda no treinamento: 0.101046 - Acc: 96.20%
+Época 169/200 - Perda no treinamento: 0.295853 - Acc: 96.49%
+Época 170/200 - Perda no treinamento: 0.090828 - Acc: 96.58%
+Época 171/200 - Perda no treinamento: 0.092764 - Acc: 96.53%
+Época 172/200 - Perda no treinamento: 0.090000 - Acc: 96.78%
+Época 173/200 - Perda no treinamento: 0.080158 - Acc: 97.07%
+Época 174/200 - Perda no treinamento: 0.091405 - Acc: 96.73%
+Época 175/200 - Perda no treinamento: 0.077386 - Acc: 97.24%
+Época 176/200 - Perda no treinamento: 0.079105 - Acc: 96.82%
+Época 177/200 - Perda no treinamento: 0.076965 - Acc: 97.09%
+Época 178/200 - Perda no treinamento: 0.071207 - Acc: 97.11%
+Época 179/200 - Perda no treinamento: 0.080157 - Acc: 97.13%
+Época 180/200 - Perda no treinamento: 0.082656 - Acc: 97.07%
+Época 181/200 - Perda no treinamento: 0.396017 - Acc: 94.91%
+Época 182/200 - Perda no treinamento: 0.094753 - Acc: 96.49%
+Época 183/200 - Perda no treinamento: 0.102769 - Acc: 96.51%
+Época 184/200 - Perda no treinamento: 0.112983 - Acc: 96.22%
+Época 185/200 - Perda no treinamento: 0.086616 - Acc: 97.02%
+Época 186/200 - Perda no treinamento: 0.093582 - Acc: 96.51%
+Época 187/200 - Perda no treinamento: 0.079064 - Acc: 97.11%
+Época 188/200 - Perda no treinamento: 0.103735 - Acc: 96.76%
+Época 189/200 - Perda no treinamento: 0.101932 - Acc: 96.09%
+Época 190/200 - Perda no treinamento: 0.078736 - Acc: 97.13%
+Época 191/200 - Perda no treinamento: 0.078250 - Acc: 97.02%
+Época 192/200 - Perda no treinamento: 0.079435 - Acc: 97.09%
+Época 193/200 - Perda no treinamento: 0.077569 - Acc: 97.33%
+Época 194/200 - Perda no treinamento: 0.072994 - Acc: 97.29%
+Época 195/200 - Perda no treinamento: 0.079986 - Acc: 97.20%
+Época 196/200 - Perda no treinamento: 0.079644 - Acc: 97.02%
+Época 197/200 - Perda no treinamento: 0.077737 - Acc: 97.13%
+Época 198/200 - Perda no treinamento: 0.076891 - Acc: 96.91%
+Época 199/200 - Perda no treinamento: 0.080067 - Acc: 97.27%
+Época 200/200 - Perda no treinamento: 0.080399 - Acc: 97.22%
+
+Acurácia para o Fold 6: 95.00%
+Precisão para o Fold 6: 95.00%
+Recall para o Fold 6: 95.00%
+F1 para o Fold 6: 95.00%
+
+!!!Teste finalizado!!!
+
+Fold 7/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1497
+Pneumonia: 1508
+Tuberculose: 1495
+
+Época 1/200 - Perda no treinamento: 0.776601 - Acc: 75.04%
+Época 2/200 - Perda no treinamento: 0.386257 - Acc: 85.11%
+Época 3/200 - Perda no treinamento: 0.356711 - Acc: 86.13%
+Época 4/200 - Perda no treinamento: 0.304254 - Acc: 87.91%
+Época 5/200 - Perda no treinamento: 0.284731 - Acc: 88.78%
+Época 6/200 - Perda no treinamento: 0.264917 - Acc: 89.67%
+Época 7/200 - Perda no treinamento: 0.265151 - Acc: 90.07%
+Época 8/200 - Perda no treinamento: 0.248420 - Acc: 90.91%
+Época 9/200 - Perda no treinamento: 0.225665 - Acc: 91.47%
+Época 10/200 - Perda no treinamento: 0.241979 - Acc: 91.07%
+Época 11/200 - Perda no treinamento: 0.234127 - Acc: 91.36%
+Época 12/200 - Perda no treinamento: 0.219020 - Acc: 91.47%
+Época 13/200 - Perda no treinamento: 0.208520 - Acc: 92.44%
+Época 14/200 - Perda no treinamento: 0.220489 - Acc: 92.00%
+Época 15/200 - Perda no treinamento: 0.198414 - Acc: 92.31%
+Época 16/200 - Perda no treinamento: 0.203471 - Acc: 92.20%
+Época 17/200 - Perda no treinamento: 0.192100 - Acc: 92.73%
+Época 18/200 - Perda no treinamento: 0.180083 - Acc: 93.27%
+Época 19/200 - Perda no treinamento: 0.209105 - Acc: 92.40%
+Época 20/200 - Perda no treinamento: 0.187448 - Acc: 93.04%
+Época 21/200 - Perda no treinamento: 0.186176 - Acc: 93.24%
+Época 22/200 - Perda no treinamento: 0.169652 - Acc: 93.96%
+Época 23/200 - Perda no treinamento: 0.181196 - Acc: 93.29%
+Época 24/200 - Perda no treinamento: 0.176565 - Acc: 93.76%
+Época 25/200 - Perda no treinamento: 0.168038 - Acc: 93.60%
+Época 26/200 - Perda no treinamento: 0.159950 - Acc: 94.38%
+Época 27/200 - Perda no treinamento: 0.166879 - Acc: 93.69%
+Época 28/200 - Perda no treinamento: 0.163828 - Acc: 94.04%
+Época 29/200 - Perda no treinamento: 0.170186 - Acc: 93.91%
+Época 30/200 - Perda no treinamento: 0.160762 - Acc: 94.29%
+Época 31/200 - Perda no treinamento: 0.160546 - Acc: 94.36%
+Época 32/200 - Perda no treinamento: 0.160976 - Acc: 93.80%
+Época 33/200 - Perda no treinamento: 0.152739 - Acc: 94.49%
+Época 34/200 - Perda no treinamento: 0.160444 - Acc: 94.07%
+Época 35/200 - Perda no treinamento: 0.155851 - Acc: 94.44%
+Época 36/200 - Perda no treinamento: 0.157344 - Acc: 94.31%
+Época 37/200 - Perda no treinamento: 0.154275 - Acc: 94.29%
+Época 38/200 - Perda no treinamento: 0.145975 - Acc: 94.38%
+Época 39/200 - Perda no treinamento: 0.137019 - Acc: 94.80%
+Época 40/200 - Perda no treinamento: 0.152148 - Acc: 94.58%
+Época 41/200 - Perda no treinamento: 0.146902 - Acc: 94.69%
+Época 42/200 - Perda no treinamento: 0.143975 - Acc: 94.67%
+Época 43/200 - Perda no treinamento: 0.140420 - Acc: 94.69%
+Época 44/200 - Perda no treinamento: 0.138691 - Acc: 95.13%
+Época 45/200 - Perda no treinamento: 0.163964 - Acc: 94.60%
+Época 46/200 - Perda no treinamento: 0.155307 - Acc: 94.51%
+Época 47/200 - Perda no treinamento: 0.133926 - Acc: 95.02%
+Época 48/200 - Perda no treinamento: 0.131643 - Acc: 95.44%
+Época 49/200 - Perda no treinamento: 0.137817 - Acc: 94.71%
+Época 50/200 - Perda no treinamento: 0.138336 - Acc: 94.84%
+Época 51/200 - Perda no treinamento: 0.135597 - Acc: 95.09%
+Época 52/200 - Perda no treinamento: 0.132937 - Acc: 95.00%
+Época 53/200 - Perda no treinamento: 0.134514 - Acc: 95.13%
+Época 54/200 - Perda no treinamento: 0.130011 - Acc: 95.33%
+Época 55/200 - Perda no treinamento: 0.151983 - Acc: 94.87%
+Época 56/200 - Perda no treinamento: 0.144119 - Acc: 94.73%
+Época 57/200 - Perda no treinamento: 0.127662 - Acc: 95.24%
+Época 58/200 - Perda no treinamento: 0.128476 - Acc: 95.51%
+Época 59/200 - Perda no treinamento: 0.129887 - Acc: 95.13%
+Época 60/200 - Perda no treinamento: 0.126493 - Acc: 95.56%
+Época 61/200 - Perda no treinamento: 0.128111 - Acc: 95.40%
+Época 62/200 - Perda no treinamento: 0.129631 - Acc: 95.67%
+Época 63/200 - Perda no treinamento: 0.125723 - Acc: 95.07%
+Época 64/200 - Perda no treinamento: 0.125513 - Acc: 95.22%
+Época 65/200 - Perda no treinamento: 0.124682 - Acc: 95.56%
+Época 66/200 - Perda no treinamento: 0.137327 - Acc: 94.87%
+Época 67/200 - Perda no treinamento: 0.126558 - Acc: 95.40%
+Época 68/200 - Perda no treinamento: 0.132897 - Acc: 95.33%
+Época 69/200 - Perda no treinamento: 0.110737 - Acc: 96.00%
+Época 70/200 - Perda no treinamento: 0.136083 - Acc: 95.36%
+Época 71/200 - Perda no treinamento: 0.121791 - Acc: 95.58%
+Época 72/200 - Perda no treinamento: 0.115896 - Acc: 95.71%
+Época 73/200 - Perda no treinamento: 0.117341 - Acc: 95.49%
+Época 74/200 - Perda no treinamento: 0.140412 - Acc: 94.67%
+Época 75/200 - Perda no treinamento: 0.121921 - Acc: 95.62%
+Época 76/200 - Perda no treinamento: 0.118980 - Acc: 95.58%
+Época 77/200 - Perda no treinamento: 0.142229 - Acc: 95.33%
+Época 78/200 - Perda no treinamento: 0.112026 - Acc: 96.16%
+Época 79/200 - Perda no treinamento: 0.110665 - Acc: 95.80%
+Época 80/200 - Perda no treinamento: 0.119798 - Acc: 95.47%
+Época 81/200 - Perda no treinamento: 0.102282 - Acc: 96.33%
+Época 82/200 - Perda no treinamento: 0.121811 - Acc: 95.80%
+Época 83/200 - Perda no treinamento: 0.106822 - Acc: 96.13%
+Época 84/200 - Perda no treinamento: 0.105661 - Acc: 96.13%
+Época 85/200 - Perda no treinamento: 0.116164 - Acc: 95.98%
+Época 86/200 - Perda no treinamento: 0.109715 - Acc: 96.13%
+Época 87/200 - Perda no treinamento: 0.121064 - Acc: 95.38%
+Época 88/200 - Perda no treinamento: 0.112497 - Acc: 95.98%
+Época 89/200 - Perda no treinamento: 0.110690 - Acc: 96.00%
+Época 90/200 - Perda no treinamento: 0.102902 - Acc: 96.36%
+Época 91/200 - Perda no treinamento: 0.121285 - Acc: 95.87%
+Época 92/200 - Perda no treinamento: 0.116170 - Acc: 95.56%
+Época 93/200 - Perda no treinamento: 0.115620 - Acc: 95.60%
+Época 94/200 - Perda no treinamento: 0.108200 - Acc: 96.09%
+Época 95/200 - Perda no treinamento: 0.102784 - Acc: 96.42%
+Época 96/200 - Perda no treinamento: 0.102602 - Acc: 96.36%
+Época 97/200 - Perda no treinamento: 0.109601 - Acc: 96.09%
+Época 98/200 - Perda no treinamento: 0.111042 - Acc: 95.87%
+Época 99/200 - Perda no treinamento: 0.111480 - Acc: 95.96%
+Época 100/200 - Perda no treinamento: 0.099124 - Acc: 96.44%
+Época 101/200 - Perda no treinamento: 0.112241 - Acc: 96.11%
+Época 102/200 - Perda no treinamento: 0.115983 - Acc: 95.80%
+Época 103/200 - Perda no treinamento: 0.117044 - Acc: 95.96%
+Época 104/200 - Perda no treinamento: 0.109458 - Acc: 96.07%
+Época 105/200 - Perda no treinamento: 0.090408 - Acc: 96.49%
+Época 106/200 - Perda no treinamento: 0.125821 - Acc: 95.80%
+Época 107/200 - Perda no treinamento: 0.140657 - Acc: 95.73%
+Época 108/200 - Perda no treinamento: 0.117618 - Acc: 96.31%
+Época 109/200 - Perda no treinamento: 0.097066 - Acc: 96.76%
+Época 110/200 - Perda no treinamento: 0.099773 - Acc: 96.09%
+Época 111/200 - Perda no treinamento: 0.094557 - Acc: 96.51%
+Época 112/200 - Perda no treinamento: 0.106755 - Acc: 96.09%
+Época 113/200 - Perda no treinamento: 0.086073 - Acc: 96.80%
+Época 114/200 - Perda no treinamento: 0.102050 - Acc: 96.29%
+Época 115/200 - Perda no treinamento: 0.098932 - Acc: 96.27%
+Época 116/200 - Perda no treinamento: 0.090705 - Acc: 96.67%
+Época 117/200 - Perda no treinamento: 0.112484 - Acc: 96.02%
+Época 118/200 - Perda no treinamento: 0.100764 - Acc: 96.31%
+Época 119/200 - Perda no treinamento: 0.106940 - Acc: 95.98%
+Época 120/200 - Perda no treinamento: 0.099859 - Acc: 96.49%
+Época 121/200 - Perda no treinamento: 0.098502 - Acc: 96.42%
+Época 122/200 - Perda no treinamento: 0.104987 - Acc: 96.18%
+Época 123/200 - Perda no treinamento: 0.090800 - Acc: 97.02%
+Época 124/200 - Perda no treinamento: 0.093496 - Acc: 96.51%
+Época 125/200 - Perda no treinamento: 0.091106 - Acc: 96.56%
+Época 126/200 - Perda no treinamento: 0.149708 - Acc: 96.29%
+Época 127/200 - Perda no treinamento: 0.099815 - Acc: 96.18%
+Época 128/200 - Perda no treinamento: 0.090195 - Acc: 96.51%
+Época 129/200 - Perda no treinamento: 0.092962 - Acc: 96.31%
+Época 130/200 - Perda no treinamento: 0.092584 - Acc: 96.82%
+Época 131/200 - Perda no treinamento: 0.093613 - Acc: 96.40%
+Época 132/200 - Perda no treinamento: 0.096888 - Acc: 96.56%
+Época 133/200 - Perda no treinamento: 0.097209 - Acc: 96.33%
+Época 134/200 - Perda no treinamento: 0.086437 - Acc: 96.96%
+Época 135/200 - Perda no treinamento: 0.334554 - Acc: 95.80%
+Época 136/200 - Perda no treinamento: 0.101443 - Acc: 96.40%
+Época 137/200 - Perda no treinamento: 0.093532 - Acc: 96.67%
+Época 138/200 - Perda no treinamento: 0.091451 - Acc: 96.56%
+Época 139/200 - Perda no treinamento: 0.098059 - Acc: 96.31%
+Época 140/200 - Perda no treinamento: 0.094613 - Acc: 96.18%
+Época 141/200 - Perda no treinamento: 0.098590 - Acc: 96.29%
+Época 142/200 - Perda no treinamento: 0.090801 - Acc: 96.76%
+Época 143/200 - Perda no treinamento: 0.092788 - Acc: 96.64%
+Época 144/200 - Perda no treinamento: 0.085735 - Acc: 96.96%
+Época 145/200 - Perda no treinamento: 0.077463 - Acc: 97.16%
+Época 146/200 - Perda no treinamento: 0.080201 - Acc: 96.78%
+Época 147/200 - Perda no treinamento: 0.091864 - Acc: 96.36%
+Época 148/200 - Perda no treinamento: 0.158780 - Acc: 95.20%
+Época 149/200 - Perda no treinamento: 0.088171 - Acc: 96.67%
+Época 150/200 - Perda no treinamento: 0.087935 - Acc: 96.78%
+Época 151/200 - Perda no treinamento: 0.099286 - Acc: 96.62%
+Época 152/200 - Perda no treinamento: 0.089783 - Acc: 96.64%
+Época 153/200 - Perda no treinamento: 0.098404 - Acc: 96.53%
+Época 154/200 - Perda no treinamento: 0.081800 - Acc: 96.78%
+Época 155/200 - Perda no treinamento: 0.088322 - Acc: 96.71%
+Época 156/200 - Perda no treinamento: 0.084964 - Acc: 97.00%
+Época 157/200 - Perda no treinamento: 0.083587 - Acc: 97.11%
+Época 158/200 - Perda no treinamento: 0.111861 - Acc: 96.33%
+Época 159/200 - Perda no treinamento: 0.082418 - Acc: 96.98%
+Época 160/200 - Perda no treinamento: 0.084471 - Acc: 96.91%
+Época 161/200 - Perda no treinamento: 0.081788 - Acc: 96.78%
+Época 162/200 - Perda no treinamento: 0.081709 - Acc: 97.11%
+Época 163/200 - Perda no treinamento: 0.086532 - Acc: 96.31%
+Época 164/200 - Perda no treinamento: 0.081430 - Acc: 96.80%
+Época 165/200 - Perda no treinamento: 0.083819 - Acc: 96.98%
+Época 166/200 - Perda no treinamento: 0.088068 - Acc: 96.53%
+Época 167/200 - Perda no treinamento: 0.280723 - Acc: 94.78%
+Época 168/200 - Perda no treinamento: 0.105581 - Acc: 96.29%
+Época 169/200 - Perda no treinamento: 0.086412 - Acc: 96.73%
+Época 170/200 - Perda no treinamento: 0.098215 - Acc: 96.67%
+Época 171/200 - Perda no treinamento: 0.100417 - Acc: 96.09%
+Época 172/200 - Perda no treinamento: 0.096176 - Acc: 96.42%
+Época 173/200 - Perda no treinamento: 0.085610 - Acc: 96.93%
+Época 174/200 - Perda no treinamento: 0.084079 - Acc: 96.91%
+Época 175/200 - Perda no treinamento: 0.091073 - Acc: 96.67%
+Época 176/200 - Perda no treinamento: 0.095056 - Acc: 96.73%
+Época 177/200 - Perda no treinamento: 0.126963 - Acc: 96.13%
+Época 178/200 - Perda no treinamento: 0.087708 - Acc: 96.84%
+Época 179/200 - Perda no treinamento: 0.116258 - Acc: 96.13%
+Época 180/200 - Perda no treinamento: 0.113211 - Acc: 96.53%
+Época 181/200 - Perda no treinamento: 0.094972 - Acc: 96.60%
+Época 182/200 - Perda no treinamento: 0.088987 - Acc: 96.80%
+Época 183/200 - Perda no treinamento: 0.080450 - Acc: 96.89%
+Época 184/200 - Perda no treinamento: 0.079111 - Acc: 96.91%
+Época 185/200 - Perda no treinamento: 0.090279 - Acc: 96.51%
+Época 186/200 - Perda no treinamento: 0.078550 - Acc: 97.00%
+Época 187/200 - Perda no treinamento: 0.083610 - Acc: 96.96%
+Época 188/200 - Perda no treinamento: 0.088555 - Acc: 96.64%
+Época 189/200 - Perda no treinamento: 0.075179 - Acc: 97.40%
+Época 190/200 - Perda no treinamento: 0.081887 - Acc: 96.98%
+Época 191/200 - Perda no treinamento: 0.092108 - Acc: 96.58%
+Época 192/200 - Perda no treinamento: 0.084396 - Acc: 96.87%
+Época 193/200 - Perda no treinamento: 0.078305 - Acc: 97.18%
+Época 194/200 - Perda no treinamento: 0.077241 - Acc: 97.07%
+Época 195/200 - Perda no treinamento: 0.081169 - Acc: 96.98%
+Época 196/200 - Perda no treinamento: 0.087562 - Acc: 96.62%
+Época 197/200 - Perda no treinamento: 0.080491 - Acc: 97.02%
+Época 198/200 - Perda no treinamento: 0.072763 - Acc: 97.00%
+Época 199/200 - Perda no treinamento: 0.094964 - Acc: 96.80%
+Época 200/200 - Perda no treinamento: 0.080032 - Acc: 97.22%
+
+Acurácia para o Fold 7: 96.00%
+Precisão para o Fold 7: 96.02%
+Recall para o Fold 7: 96.00%
+F1 para o Fold 7: 96.01%
+
+!!!Teste finalizado!!!
+
+Fold 8/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1493
+Pneumonia: 1516
+Tuberculose: 1491
+
+Época 1/200 - Perda no treinamento: 0.856403 - Acc: 74.40%
+Época 2/200 - Perda no treinamento: 0.408633 - Acc: 84.33%
+Época 3/200 - Perda no treinamento: 0.348027 - Acc: 86.33%
+Época 4/200 - Perda no treinamento: 0.337153 - Acc: 86.98%
+Época 5/200 - Perda no treinamento: 0.309014 - Acc: 88.93%
+Época 6/200 - Perda no treinamento: 0.300368 - Acc: 88.53%
+Época 7/200 - Perda no treinamento: 0.249832 - Acc: 90.36%
+Época 8/200 - Perda no treinamento: 0.258956 - Acc: 90.27%
+Época 9/200 - Perda no treinamento: 0.263349 - Acc: 90.20%
+Época 10/200 - Perda no treinamento: 0.266028 - Acc: 89.73%
+Época 11/200 - Perda no treinamento: 0.248805 - Acc: 90.71%
+Época 12/200 - Perda no treinamento: 0.242556 - Acc: 91.13%
+Época 13/200 - Perda no treinamento: 0.206188 - Acc: 91.93%
+Época 14/200 - Perda no treinamento: 0.226148 - Acc: 91.84%
+Época 15/200 - Perda no treinamento: 0.237166 - Acc: 91.04%
+Época 16/200 - Perda no treinamento: 0.211898 - Acc: 92.04%
+Época 17/200 - Perda no treinamento: 0.209548 - Acc: 92.40%
+Época 18/200 - Perda no treinamento: 0.205994 - Acc: 92.60%
+Época 19/200 - Perda no treinamento: 0.199312 - Acc: 92.87%
+Época 20/200 - Perda no treinamento: 0.201040 - Acc: 92.73%
+Época 21/200 - Perda no treinamento: 0.182774 - Acc: 92.82%
+Época 22/200 - Perda no treinamento: 0.198419 - Acc: 92.64%
+Época 23/200 - Perda no treinamento: 0.218711 - Acc: 92.16%
+Época 24/200 - Perda no treinamento: 0.198865 - Acc: 92.82%
+Época 25/200 - Perda no treinamento: 0.177245 - Acc: 93.60%
+Época 26/200 - Perda no treinamento: 0.182695 - Acc: 93.56%
+Época 27/200 - Perda no treinamento: 0.189784 - Acc: 93.13%
+Época 28/200 - Perda no treinamento: 0.180291 - Acc: 93.33%
+Época 29/200 - Perda no treinamento: 0.161274 - Acc: 94.07%
+Época 30/200 - Perda no treinamento: 0.164300 - Acc: 93.98%
+Época 31/200 - Perda no treinamento: 0.169347 - Acc: 93.76%
+Época 32/200 - Perda no treinamento: 0.184264 - Acc: 93.09%
+Época 33/200 - Perda no treinamento: 0.165660 - Acc: 93.98%
+Época 34/200 - Perda no treinamento: 0.155210 - Acc: 94.49%
+Época 35/200 - Perda no treinamento: 0.165093 - Acc: 93.91%
+Época 36/200 - Perda no treinamento: 0.160021 - Acc: 94.16%
+Época 37/200 - Perda no treinamento: 0.170805 - Acc: 93.96%
+Época 38/200 - Perda no treinamento: 0.155819 - Acc: 94.09%
+Época 39/200 - Perda no treinamento: 0.152037 - Acc: 94.33%
+Época 40/200 - Perda no treinamento: 0.158257 - Acc: 94.36%
+Época 41/200 - Perda no treinamento: 0.152794 - Acc: 94.33%
+Época 42/200 - Perda no treinamento: 0.164140 - Acc: 94.31%
+Época 43/200 - Perda no treinamento: 0.151343 - Acc: 94.69%
+Época 44/200 - Perda no treinamento: 0.152138 - Acc: 94.69%
+Época 45/200 - Perda no treinamento: 0.143130 - Acc: 94.78%
+Época 46/200 - Perda no treinamento: 0.150330 - Acc: 94.87%
+Época 47/200 - Perda no treinamento: 0.133056 - Acc: 95.16%
+Época 48/200 - Perda no treinamento: 0.147536 - Acc: 94.53%
+Época 49/200 - Perda no treinamento: 0.141939 - Acc: 94.91%
+Época 50/200 - Perda no treinamento: 0.142510 - Acc: 94.93%
+Época 51/200 - Perda no treinamento: 0.143101 - Acc: 95.11%
+Época 52/200 - Perda no treinamento: 0.141327 - Acc: 95.11%
+Época 53/200 - Perda no treinamento: 0.143318 - Acc: 94.67%
+Época 54/200 - Perda no treinamento: 0.143556 - Acc: 94.73%
+Época 55/200 - Perda no treinamento: 0.129106 - Acc: 95.11%
+Época 56/200 - Perda no treinamento: 0.150354 - Acc: 94.56%
+Época 57/200 - Perda no treinamento: 0.135995 - Acc: 94.91%
+Época 58/200 - Perda no treinamento: 0.135389 - Acc: 95.18%
+Época 59/200 - Perda no treinamento: 0.124292 - Acc: 95.29%
+Época 60/200 - Perda no treinamento: 0.126178 - Acc: 95.00%
+Época 61/200 - Perda no treinamento: 0.133477 - Acc: 95.36%
+Época 62/200 - Perda no treinamento: 0.125310 - Acc: 95.38%
+Época 63/200 - Perda no treinamento: 0.122149 - Acc: 95.67%
+Época 64/200 - Perda no treinamento: 0.140697 - Acc: 95.22%
+Época 65/200 - Perda no treinamento: 0.134880 - Acc: 95.20%
+Época 66/200 - Perda no treinamento: 0.123349 - Acc: 95.64%
+Época 67/200 - Perda no treinamento: 0.120293 - Acc: 95.80%
+Época 68/200 - Perda no treinamento: 0.140275 - Acc: 95.09%
+Época 69/200 - Perda no treinamento: 0.140096 - Acc: 95.00%
+Época 70/200 - Perda no treinamento: 0.130534 - Acc: 95.42%
+Época 71/200 - Perda no treinamento: 0.139449 - Acc: 95.56%
+Época 72/200 - Perda no treinamento: 0.136346 - Acc: 95.24%
+Época 73/200 - Perda no treinamento: 0.127008 - Acc: 95.44%
+Época 74/200 - Perda no treinamento: 0.123617 - Acc: 95.51%
+Época 75/200 - Perda no treinamento: 0.121751 - Acc: 95.76%
+Época 76/200 - Perda no treinamento: 0.119298 - Acc: 95.62%
+Época 77/200 - Perda no treinamento: 0.121498 - Acc: 95.60%
+Época 78/200 - Perda no treinamento: 0.118568 - Acc: 95.91%
+Época 79/200 - Perda no treinamento: 0.110528 - Acc: 95.87%
+Época 80/200 - Perda no treinamento: 0.116118 - Acc: 95.84%
+Época 81/200 - Perda no treinamento: 0.118886 - Acc: 95.29%
+Época 82/200 - Perda no treinamento: 0.135117 - Acc: 95.80%
+Época 83/200 - Perda no treinamento: 0.122580 - Acc: 95.51%
+Época 84/200 - Perda no treinamento: 0.129873 - Acc: 95.56%
+Época 85/200 - Perda no treinamento: 0.117572 - Acc: 95.60%
+Época 86/200 - Perda no treinamento: 0.114269 - Acc: 96.18%
+Época 87/200 - Perda no treinamento: 0.115016 - Acc: 96.02%
+Época 88/200 - Perda no treinamento: 0.111666 - Acc: 95.82%
+Época 89/200 - Perda no treinamento: 0.123037 - Acc: 95.40%
+Época 90/200 - Perda no treinamento: 0.125621 - Acc: 95.62%
+Época 91/200 - Perda no treinamento: 0.103286 - Acc: 96.18%
+Época 92/200 - Perda no treinamento: 0.112883 - Acc: 96.02%
+Época 93/200 - Perda no treinamento: 0.122399 - Acc: 95.56%
+Época 94/200 - Perda no treinamento: 0.154502 - Acc: 95.36%
+Época 95/200 - Perda no treinamento: 0.129224 - Acc: 95.49%
+Época 96/200 - Perda no treinamento: 0.118393 - Acc: 95.84%
+Época 97/200 - Perda no treinamento: 0.126555 - Acc: 95.58%
+Época 98/200 - Perda no treinamento: 0.116906 - Acc: 95.89%
+Época 99/200 - Perda no treinamento: 0.115151 - Acc: 96.04%
+Época 100/200 - Perda no treinamento: 0.111545 - Acc: 95.91%
+Época 101/200 - Perda no treinamento: 0.119146 - Acc: 95.82%
+Época 102/200 - Perda no treinamento: 0.098477 - Acc: 96.38%
+Época 103/200 - Perda no treinamento: 0.104317 - Acc: 96.38%
+Época 104/200 - Perda no treinamento: 0.112494 - Acc: 96.11%
+Época 105/200 - Perda no treinamento: 0.114349 - Acc: 95.96%
+Época 106/200 - Perda no treinamento: 0.110505 - Acc: 96.13%
+Época 107/200 - Perda no treinamento: 0.116180 - Acc: 95.78%
+Época 108/200 - Perda no treinamento: 0.129592 - Acc: 95.78%
+Época 109/200 - Perda no treinamento: 0.124569 - Acc: 95.40%
+Época 110/200 - Perda no treinamento: 0.086059 - Acc: 97.07%
+Época 111/200 - Perda no treinamento: 0.103067 - Acc: 96.58%
+Época 112/200 - Perda no treinamento: 0.099990 - Acc: 96.56%
+Época 113/200 - Perda no treinamento: 0.110318 - Acc: 96.42%
+Época 114/200 - Perda no treinamento: 0.103208 - Acc: 96.29%
+Época 115/200 - Perda no treinamento: 0.112401 - Acc: 95.87%
+Época 116/200 - Perda no treinamento: 0.108780 - Acc: 96.11%
+Época 117/200 - Perda no treinamento: 0.103569 - Acc: 96.51%
+Época 118/200 - Perda no treinamento: 0.105853 - Acc: 96.31%
+Época 119/200 - Perda no treinamento: 0.116985 - Acc: 96.29%
+Época 120/200 - Perda no treinamento: 0.108734 - Acc: 96.13%
+Época 121/200 - Perda no treinamento: 0.103847 - Acc: 96.27%
+Época 122/200 - Perda no treinamento: 0.108186 - Acc: 96.09%
+Época 123/200 - Perda no treinamento: 0.094313 - Acc: 96.42%
+Época 124/200 - Perda no treinamento: 0.100230 - Acc: 96.36%
+Época 125/200 - Perda no treinamento: 0.100509 - Acc: 96.33%
+Época 126/200 - Perda no treinamento: 0.104655 - Acc: 96.42%
+Época 127/200 - Perda no treinamento: 0.098612 - Acc: 96.20%
+Época 128/200 - Perda no treinamento: 0.140905 - Acc: 95.53%
+Época 129/200 - Perda no treinamento: 0.117739 - Acc: 96.22%
+Época 130/200 - Perda no treinamento: 0.097773 - Acc: 96.56%
+Época 131/200 - Perda no treinamento: 0.088161 - Acc: 96.69%
+Época 132/200 - Perda no treinamento: 0.101028 - Acc: 96.60%
+Época 133/200 - Perda no treinamento: 0.102796 - Acc: 96.53%
+Época 134/200 - Perda no treinamento: 0.097817 - Acc: 96.18%
+Época 135/200 - Perda no treinamento: 0.103937 - Acc: 96.22%
+Época 136/200 - Perda no treinamento: 0.102376 - Acc: 95.89%
+Época 137/200 - Perda no treinamento: 0.091201 - Acc: 96.53%
+Época 138/200 - Perda no treinamento: 0.133180 - Acc: 95.73%
+Época 139/200 - Perda no treinamento: 0.172673 - Acc: 95.11%
+Época 140/200 - Perda no treinamento: 0.100999 - Acc: 96.73%
+Época 141/200 - Perda no treinamento: 0.094230 - Acc: 96.40%
+Época 142/200 - Perda no treinamento: 0.090384 - Acc: 96.44%
+Época 143/200 - Perda no treinamento: 0.098043 - Acc: 96.67%
+Época 144/200 - Perda no treinamento: 0.094072 - Acc: 96.73%
+Época 145/200 - Perda no treinamento: 0.101404 - Acc: 96.36%
+Época 146/200 - Perda no treinamento: 0.110587 - Acc: 96.44%
+Época 147/200 - Perda no treinamento: 0.098999 - Acc: 96.53%
+Época 148/200 - Perda no treinamento: 0.093309 - Acc: 96.69%
+Época 149/200 - Perda no treinamento: 0.096988 - Acc: 96.47%
+Época 150/200 - Perda no treinamento: 0.088596 - Acc: 96.67%
+Época 151/200 - Perda no treinamento: 0.102085 - Acc: 96.24%
+Época 152/200 - Perda no treinamento: 0.107335 - Acc: 96.02%
+Época 153/200 - Perda no treinamento: 0.090660 - Acc: 96.82%
+Época 154/200 - Perda no treinamento: 0.085292 - Acc: 96.87%
+Época 155/200 - Perda no treinamento: 0.096248 - Acc: 96.67%
+Época 156/200 - Perda no treinamento: 0.084834 - Acc: 97.20%
+Época 157/200 - Perda no treinamento: 0.086843 - Acc: 96.96%
+Época 158/200 - Perda no treinamento: 0.093050 - Acc: 96.42%
+Época 159/200 - Perda no treinamento: 0.090157 - Acc: 96.80%
+Época 160/200 - Perda no treinamento: 0.087483 - Acc: 96.80%
+Época 161/200 - Perda no treinamento: 0.087205 - Acc: 96.98%
+Época 162/200 - Perda no treinamento: 0.091981 - Acc: 96.49%
+Época 163/200 - Perda no treinamento: 0.094433 - Acc: 96.67%
+Época 164/200 - Perda no treinamento: 0.139222 - Acc: 95.91%
+Época 165/200 - Perda no treinamento: 0.105062 - Acc: 95.96%
+Época 166/200 - Perda no treinamento: 0.082403 - Acc: 97.22%
+Época 167/200 - Perda no treinamento: 0.105918 - Acc: 96.40%
+Época 168/200 - Perda no treinamento: 0.084519 - Acc: 96.73%
+Época 169/200 - Perda no treinamento: 0.095459 - Acc: 96.27%
+Época 170/200 - Perda no treinamento: 0.083904 - Acc: 96.78%
+Época 171/200 - Perda no treinamento: 0.123539 - Acc: 96.27%
+Época 172/200 - Perda no treinamento: 0.134642 - Acc: 95.62%
+Época 173/200 - Perda no treinamento: 0.101795 - Acc: 96.51%
+Época 174/200 - Perda no treinamento: 0.085154 - Acc: 97.00%
+Época 175/200 - Perda no treinamento: 0.082323 - Acc: 97.13%
+Época 176/200 - Perda no treinamento: 0.081770 - Acc: 97.13%
+Época 177/200 - Perda no treinamento: 0.080986 - Acc: 97.13%
+Época 178/200 - Perda no treinamento: 0.084334 - Acc: 96.89%
+Época 179/200 - Perda no treinamento: 0.076884 - Acc: 97.09%
+Época 180/200 - Perda no treinamento: 0.080785 - Acc: 96.98%
+Época 181/200 - Perda no treinamento: 0.092324 - Acc: 96.93%
+Época 182/200 - Perda no treinamento: 0.079051 - Acc: 97.11%
+Época 183/200 - Perda no treinamento: 0.081692 - Acc: 96.91%
+Época 184/200 - Perda no treinamento: 0.086522 - Acc: 96.73%
+Época 185/200 - Perda no treinamento: 0.082797 - Acc: 96.91%
+Época 186/200 - Perda no treinamento: 0.078297 - Acc: 97.24%
+Época 187/200 - Perda no treinamento: 0.072844 - Acc: 97.18%
+Época 188/200 - Perda no treinamento: 0.100511 - Acc: 96.78%
+Época 189/200 - Perda no treinamento: 0.112458 - Acc: 96.36%
+Época 190/200 - Perda no treinamento: 0.082272 - Acc: 97.18%
+Época 191/200 - Perda no treinamento: 0.079802 - Acc: 97.09%
+Época 192/200 - Perda no treinamento: 0.081901 - Acc: 97.18%
+Época 193/200 - Perda no treinamento: 0.086040 - Acc: 96.53%
+Época 194/200 - Perda no treinamento: 0.085835 - Acc: 96.80%
+Época 195/200 - Perda no treinamento: 0.079520 - Acc: 97.13%
+Época 196/200 - Perda no treinamento: 0.075508 - Acc: 97.62%
+Época 197/200 - Perda no treinamento: 0.085894 - Acc: 96.84%
+Época 198/200 - Perda no treinamento: 0.083182 - Acc: 96.98%
+Época 199/200 - Perda no treinamento: 0.085827 - Acc: 96.89%
+Época 200/200 - Perda no treinamento: 0.079264 - Acc: 97.00%
+
+Acurácia para o Fold 8: 95.20%
+Precisão para o Fold 8: 95.26%
+Recall para o Fold 8: 95.20%
+F1 para o Fold 8: 95.21%
+
+!!!Teste finalizado!!!
+
+Fold 9/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1515
+Pneumonia: 1483
+Tuberculose: 1502
+
+Época 1/200 - Perda no treinamento: 0.965304 - Acc: 75.49%
+Época 2/200 - Perda no treinamento: 0.407129 - Acc: 84.33%
+Época 3/200 - Perda no treinamento: 0.330437 - Acc: 87.42%
+Época 4/200 - Perda no treinamento: 0.326189 - Acc: 87.40%
+Época 5/200 - Perda no treinamento: 0.312369 - Acc: 88.40%
+Época 6/200 - Perda no treinamento: 0.267973 - Acc: 90.02%
+Época 7/200 - Perda no treinamento: 0.275243 - Acc: 89.62%
+Época 8/200 - Perda no treinamento: 0.244247 - Acc: 90.82%
+Época 9/200 - Perda no treinamento: 0.243233 - Acc: 90.67%
+Época 10/200 - Perda no treinamento: 0.240233 - Acc: 90.47%
+Época 11/200 - Perda no treinamento: 0.231806 - Acc: 91.47%
+Época 12/200 - Perda no treinamento: 0.217308 - Acc: 91.53%
+Época 13/200 - Perda no treinamento: 0.218523 - Acc: 91.91%
+Época 14/200 - Perda no treinamento: 0.224038 - Acc: 92.33%
+Época 15/200 - Perda no treinamento: 0.210688 - Acc: 92.16%
+Época 16/200 - Perda no treinamento: 0.210782 - Acc: 92.22%
+Época 17/200 - Perda no treinamento: 0.212274 - Acc: 92.33%
+Época 18/200 - Perda no treinamento: 0.188783 - Acc: 92.93%
+Época 19/200 - Perda no treinamento: 0.198908 - Acc: 92.69%
+Época 20/200 - Perda no treinamento: 0.196984 - Acc: 92.40%
+Época 21/200 - Perda no treinamento: 0.186604 - Acc: 93.07%
+Época 22/200 - Perda no treinamento: 0.185004 - Acc: 93.31%
+Época 23/200 - Perda no treinamento: 0.198926 - Acc: 93.42%
+Época 24/200 - Perda no treinamento: 0.178407 - Acc: 93.69%
+Época 25/200 - Perda no treinamento: 0.176634 - Acc: 93.38%
+Época 26/200 - Perda no treinamento: 0.166568 - Acc: 94.20%
+Época 27/200 - Perda no treinamento: 0.173419 - Acc: 93.84%
+Época 28/200 - Perda no treinamento: 0.166928 - Acc: 93.67%
+Época 29/200 - Perda no treinamento: 0.165916 - Acc: 93.89%
+Época 30/200 - Perda no treinamento: 0.191792 - Acc: 93.40%
+Época 31/200 - Perda no treinamento: 0.157245 - Acc: 94.04%
+Época 32/200 - Perda no treinamento: 0.169499 - Acc: 94.33%
+Época 33/200 - Perda no treinamento: 0.168212 - Acc: 93.73%
+Época 34/200 - Perda no treinamento: 0.162664 - Acc: 94.02%
+Época 35/200 - Perda no treinamento: 0.171849 - Acc: 94.53%
+Época 36/200 - Perda no treinamento: 0.173054 - Acc: 94.13%
+Época 37/200 - Perda no treinamento: 0.153499 - Acc: 94.60%
+Época 38/200 - Perda no treinamento: 0.151238 - Acc: 94.49%
+Época 39/200 - Perda no treinamento: 0.155361 - Acc: 94.60%
+Época 40/200 - Perda no treinamento: 0.144509 - Acc: 94.84%
+Época 41/200 - Perda no treinamento: 0.145296 - Acc: 94.80%
+Época 42/200 - Perda no treinamento: 0.164940 - Acc: 93.67%
+Época 43/200 - Perda no treinamento: 0.150667 - Acc: 94.76%
+Época 44/200 - Perda no treinamento: 0.150055 - Acc: 94.56%
+Época 45/200 - Perda no treinamento: 0.166825 - Acc: 94.49%
+Época 46/200 - Perda no treinamento: 0.149018 - Acc: 94.80%
+Época 47/200 - Perda no treinamento: 0.135081 - Acc: 95.11%
+Época 48/200 - Perda no treinamento: 0.148686 - Acc: 94.73%
+Época 49/200 - Perda no treinamento: 0.144365 - Acc: 94.64%
+Época 50/200 - Perda no treinamento: 0.147147 - Acc: 95.07%
+Época 51/200 - Perda no treinamento: 0.152889 - Acc: 94.60%
+Época 52/200 - Perda no treinamento: 0.142177 - Acc: 95.02%
+Época 53/200 - Perda no treinamento: 0.138216 - Acc: 94.91%
+Época 54/200 - Perda no treinamento: 0.135864 - Acc: 94.96%
+Época 55/200 - Perda no treinamento: 0.143866 - Acc: 94.53%
+Época 56/200 - Perda no treinamento: 0.144737 - Acc: 95.07%
+Época 57/200 - Perda no treinamento: 0.123239 - Acc: 95.58%
+Época 58/200 - Perda no treinamento: 0.121283 - Acc: 95.93%
+Época 59/200 - Perda no treinamento: 0.137081 - Acc: 95.27%
+Época 60/200 - Perda no treinamento: 0.139593 - Acc: 94.36%
+Época 61/200 - Perda no treinamento: 0.153110 - Acc: 94.89%
+Época 62/200 - Perda no treinamento: 0.148319 - Acc: 94.89%
+Época 63/200 - Perda no treinamento: 0.126626 - Acc: 95.27%
+Época 64/200 - Perda no treinamento: 0.131362 - Acc: 95.51%
+Época 65/200 - Perda no treinamento: 0.111327 - Acc: 95.87%
+Época 66/200 - Perda no treinamento: 0.112699 - Acc: 95.62%
+Época 67/200 - Perda no treinamento: 0.123334 - Acc: 95.67%
+Época 68/200 - Perda no treinamento: 0.123711 - Acc: 95.89%
+Época 69/200 - Perda no treinamento: 0.124328 - Acc: 95.80%
+Época 70/200 - Perda no treinamento: 0.118688 - Acc: 95.87%
+Época 71/200 - Perda no treinamento: 0.133115 - Acc: 95.24%
+Época 72/200 - Perda no treinamento: 0.126305 - Acc: 95.42%
+Época 73/200 - Perda no treinamento: 0.122894 - Acc: 95.58%
+Época 74/200 - Perda no treinamento: 0.117458 - Acc: 95.87%
+Época 75/200 - Perda no treinamento: 0.111835 - Acc: 95.91%
+Época 76/200 - Perda no treinamento: 0.113301 - Acc: 96.02%
+Época 77/200 - Perda no treinamento: 0.105691 - Acc: 96.16%
+Época 78/200 - Perda no treinamento: 0.122899 - Acc: 95.78%
+Época 79/200 - Perda no treinamento: 0.115934 - Acc: 95.69%
+Época 80/200 - Perda no treinamento: 0.135923 - Acc: 95.33%
+Época 81/200 - Perda no treinamento: 0.132308 - Acc: 95.67%
+Época 82/200 - Perda no treinamento: 0.109191 - Acc: 96.24%
+Época 83/200 - Perda no treinamento: 0.117456 - Acc: 95.91%
+Época 84/200 - Perda no treinamento: 0.135883 - Acc: 95.13%
+Época 85/200 - Perda no treinamento: 0.112634 - Acc: 95.78%
+Época 86/200 - Perda no treinamento: 0.113688 - Acc: 95.91%
+Época 87/200 - Perda no treinamento: 0.108445 - Acc: 95.87%
+Época 88/200 - Perda no treinamento: 0.119881 - Acc: 95.58%
+Época 89/200 - Perda no treinamento: 0.124160 - Acc: 95.67%
+Época 90/200 - Perda no treinamento: 0.111501 - Acc: 95.44%
+Época 91/200 - Perda no treinamento: 0.105822 - Acc: 96.09%
+Época 92/200 - Perda no treinamento: 0.115393 - Acc: 95.82%
+Época 93/200 - Perda no treinamento: 0.117462 - Acc: 95.96%
+Época 94/200 - Perda no treinamento: 0.139452 - Acc: 95.02%
+Época 95/200 - Perda no treinamento: 0.110641 - Acc: 95.82%
+Época 96/200 - Perda no treinamento: 0.107757 - Acc: 95.98%
+Época 97/200 - Perda no treinamento: 0.106302 - Acc: 96.07%
+Época 98/200 - Perda no treinamento: 0.109687 - Acc: 95.87%
+Época 99/200 - Perda no treinamento: 0.113752 - Acc: 95.98%
+Época 100/200 - Perda no treinamento: 0.163591 - Acc: 95.11%
+Época 101/200 - Perda no treinamento: 0.108026 - Acc: 95.84%
+Época 102/200 - Perda no treinamento: 0.112810 - Acc: 95.76%
+Época 103/200 - Perda no treinamento: 0.180594 - Acc: 94.91%
+Época 104/200 - Perda no treinamento: 0.116089 - Acc: 95.71%
+Época 105/200 - Perda no treinamento: 0.107464 - Acc: 96.02%
+Época 106/200 - Perda no treinamento: 0.102036 - Acc: 96.42%
+Época 107/200 - Perda no treinamento: 0.108782 - Acc: 95.96%
+Época 108/200 - Perda no treinamento: 0.107192 - Acc: 96.29%
+Época 109/200 - Perda no treinamento: 0.114225 - Acc: 95.80%
+Época 110/200 - Perda no treinamento: 0.098781 - Acc: 96.53%
+Época 111/200 - Perda no treinamento: 0.100529 - Acc: 96.18%
+Época 112/200 - Perda no treinamento: 0.097712 - Acc: 96.18%
+Época 113/200 - Perda no treinamento: 0.090528 - Acc: 96.47%
+Época 114/200 - Perda no treinamento: 0.102077 - Acc: 96.20%
+Época 115/200 - Perda no treinamento: 0.099783 - Acc: 96.44%
+Época 116/200 - Perda no treinamento: 0.146994 - Acc: 95.22%
+Época 117/200 - Perda no treinamento: 0.105577 - Acc: 96.11%
+Época 118/200 - Perda no treinamento: 0.103308 - Acc: 96.18%
+Época 119/200 - Perda no treinamento: 0.106577 - Acc: 96.02%
+Época 120/200 - Perda no treinamento: 0.095513 - Acc: 96.58%
+Época 121/200 - Perda no treinamento: 0.097936 - Acc: 96.62%
+Época 122/200 - Perda no treinamento: 0.094572 - Acc: 96.84%
+Época 123/200 - Perda no treinamento: 0.111841 - Acc: 96.00%
+Época 124/200 - Perda no treinamento: 0.097334 - Acc: 96.53%
+Época 125/200 - Perda no treinamento: 0.108801 - Acc: 96.13%
+Época 126/200 - Perda no treinamento: 0.100783 - Acc: 96.29%
+Época 127/200 - Perda no treinamento: 0.117534 - Acc: 96.18%
+Época 128/200 - Perda no treinamento: 0.099939 - Acc: 96.36%
+Época 129/200 - Perda no treinamento: 0.100325 - Acc: 95.98%
+Época 130/200 - Perda no treinamento: 0.144081 - Acc: 95.98%
+Época 131/200 - Perda no treinamento: 0.115464 - Acc: 95.64%
+Época 132/200 - Perda no treinamento: 0.098471 - Acc: 96.24%
+Época 133/200 - Perda no treinamento: 0.097955 - Acc: 96.56%
+Época 134/200 - Perda no treinamento: 0.095854 - Acc: 96.67%
+Época 135/200 - Perda no treinamento: 0.091953 - Acc: 96.64%
+Época 136/200 - Perda no treinamento: 0.095343 - Acc: 96.80%
+Época 137/200 - Perda no treinamento: 0.094913 - Acc: 96.60%
+Época 138/200 - Perda no treinamento: 0.106538 - Acc: 96.09%
+Época 139/200 - Perda no treinamento: 0.090581 - Acc: 96.69%
+Época 140/200 - Perda no treinamento: 0.097189 - Acc: 96.38%
+Época 141/200 - Perda no treinamento: 0.089776 - Acc: 96.87%
+Época 142/200 - Perda no treinamento: 0.085196 - Acc: 97.04%
+Época 143/200 - Perda no treinamento: 0.093348 - Acc: 96.69%
+Época 144/200 - Perda no treinamento: 0.091331 - Acc: 96.51%
+Época 145/200 - Perda no treinamento: 0.084276 - Acc: 97.09%
+Época 146/200 - Perda no treinamento: 0.091684 - Acc: 96.78%
+Época 147/200 - Perda no treinamento: 0.124024 - Acc: 96.58%
+Época 148/200 - Perda no treinamento: 0.124922 - Acc: 96.53%
+Época 149/200 - Perda no treinamento: 0.095282 - Acc: 96.64%
+Época 150/200 - Perda no treinamento: 0.093069 - Acc: 96.38%
+Época 151/200 - Perda no treinamento: 0.089733 - Acc: 96.93%
+Época 152/200 - Perda no treinamento: 0.087275 - Acc: 96.89%
+Época 153/200 - Perda no treinamento: 0.090128 - Acc: 96.62%
+Época 154/200 - Perda no treinamento: 0.094297 - Acc: 96.51%
+Época 155/200 - Perda no treinamento: 0.086526 - Acc: 96.93%
+Época 156/200 - Perda no treinamento: 0.142226 - Acc: 95.98%
+Época 157/200 - Perda no treinamento: 0.095352 - Acc: 96.42%
+Época 158/200 - Perda no treinamento: 0.089715 - Acc: 96.67%
+Época 159/200 - Perda no treinamento: 0.091387 - Acc: 96.64%
+Época 160/200 - Perda no treinamento: 0.091565 - Acc: 96.38%
+Época 161/200 - Perda no treinamento: 0.098531 - Acc: 96.49%
+Época 162/200 - Perda no treinamento: 0.092344 - Acc: 96.36%
+Época 163/200 - Perda no treinamento: 0.203870 - Acc: 95.11%
+Época 164/200 - Perda no treinamento: 0.087175 - Acc: 96.49%
+Época 165/200 - Perda no treinamento: 0.089004 - Acc: 96.71%
+Época 166/200 - Perda no treinamento: 0.086915 - Acc: 96.91%
+Época 167/200 - Perda no treinamento: 0.178161 - Acc: 94.84%
+Época 168/200 - Perda no treinamento: 0.113254 - Acc: 95.89%
+Época 169/200 - Perda no treinamento: 0.107182 - Acc: 96.33%
+Época 170/200 - Perda no treinamento: 0.089276 - Acc: 96.76%
+Época 171/200 - Perda no treinamento: 0.092500 - Acc: 96.76%
+Época 172/200 - Perda no treinamento: 0.081698 - Acc: 97.13%
+Época 173/200 - Perda no treinamento: 0.088252 - Acc: 96.84%
+Época 174/200 - Perda no treinamento: 0.086465 - Acc: 96.93%
+Época 175/200 - Perda no treinamento: 0.083256 - Acc: 96.87%
+Época 176/200 - Perda no treinamento: 0.090145 - Acc: 96.76%
+Época 177/200 - Perda no treinamento: 0.088969 - Acc: 96.76%
+Época 178/200 - Perda no treinamento: 0.080270 - Acc: 96.91%
+Época 179/200 - Perda no treinamento: 0.081864 - Acc: 96.69%
+Época 180/200 - Perda no treinamento: 0.076155 - Acc: 97.24%
+Época 181/200 - Perda no treinamento: 0.086265 - Acc: 96.71%
+Época 182/200 - Perda no treinamento: 0.087111 - Acc: 96.80%
+Época 183/200 - Perda no treinamento: 0.086718 - Acc: 96.82%
+Época 184/200 - Perda no treinamento: 0.085984 - Acc: 96.73%
+Época 185/200 - Perda no treinamento: 0.074460 - Acc: 97.13%
+Época 186/200 - Perda no treinamento: 0.083840 - Acc: 96.73%
+Época 187/200 - Perda no treinamento: 0.332226 - Acc: 95.78%
+Época 188/200 - Perda no treinamento: 0.107999 - Acc: 95.89%
+Época 189/200 - Perda no treinamento: 0.091228 - Acc: 96.58%
+Época 190/200 - Perda no treinamento: 0.088740 - Acc: 97.13%
+Época 191/200 - Perda no treinamento: 0.085763 - Acc: 96.60%
+Época 192/200 - Perda no treinamento: 0.081276 - Acc: 96.89%
+Época 193/200 - Perda no treinamento: 0.083307 - Acc: 97.09%
+Época 194/200 - Perda no treinamento: 0.160348 - Acc: 96.44%
+Época 195/200 - Perda no treinamento: 0.116502 - Acc: 96.40%
+Época 196/200 - Perda no treinamento: 0.088860 - Acc: 96.69%
+Época 197/200 - Perda no treinamento: 0.082717 - Acc: 96.89%
+Época 198/200 - Perda no treinamento: 0.081383 - Acc: 97.18%
+Época 199/200 - Perda no treinamento: 0.078816 - Acc: 97.16%
+Época 200/200 - Perda no treinamento: 0.081364 - Acc: 96.91%
+
+Acurácia para o Fold 9: 96.40%
+Precisão para o Fold 9: 96.39%
+Recall para o Fold 9: 96.40%
+F1 para o Fold 9: 96.39%
+
+!!!Teste finalizado!!!
+
+Fold 10/10
+
+Quantidade de dados (Treinamento): 4500
+Quantidade de dados (Teste): 500
+
+!!!Distribuição dos dados de treinamento!!!
+
+Normal: 1512
+Pneumonia: 1488
+Tuberculose: 1500
+
+Época 1/200 - Perda no treinamento: 1.008605 - Acc: 74.78%
+Época 2/200 - Perda no treinamento: 0.405909 - Acc: 84.89%
+Época 3/200 - Perda no treinamento: 0.374346 - Acc: 85.76%
+Época 4/200 - Perda no treinamento: 0.352903 - Acc: 86.36%
+Época 5/200 - Perda no treinamento: 0.325164 - Acc: 88.24%
+Época 6/200 - Perda no treinamento: 0.278290 - Acc: 89.47%
+Época 7/200 - Perda no treinamento: 0.286027 - Acc: 89.47%
+Época 8/200 - Perda no treinamento: 0.257086 - Acc: 90.27%
+Época 9/200 - Perda no treinamento: 0.239181 - Acc: 91.22%
+Época 10/200 - Perda no treinamento: 0.251237 - Acc: 91.00%
+Época 11/200 - Perda no treinamento: 0.241204 - Acc: 91.29%
+Época 12/200 - Perda no treinamento: 0.240431 - Acc: 91.49%
+Época 13/200 - Perda no treinamento: 0.214984 - Acc: 91.64%
+Época 14/200 - Perda no treinamento: 0.221802 - Acc: 91.58%
+Época 15/200 - Perda no treinamento: 0.216284 - Acc: 92.49%
+Época 16/200 - Perda no treinamento: 0.211669 - Acc: 92.16%
+Época 17/200 - Perda no treinamento: 0.225068 - Acc: 91.93%
+Época 18/200 - Perda no treinamento: 0.198652 - Acc: 92.71%
+Época 19/200 - Perda no treinamento: 0.212880 - Acc: 92.27%
+Época 20/200 - Perda no treinamento: 0.189700 - Acc: 93.40%
+Época 21/200 - Perda no treinamento: 0.192293 - Acc: 93.09%
+Época 22/200 - Perda no treinamento: 0.191904 - Acc: 92.58%
+Época 23/200 - Perda no treinamento: 0.198276 - Acc: 92.53%
+Época 24/200 - Perda no treinamento: 0.177262 - Acc: 92.96%
+Época 25/200 - Perda no treinamento: 0.179774 - Acc: 93.58%
+Época 26/200 - Perda no treinamento: 0.185233 - Acc: 93.38%
+Época 27/200 - Perda no treinamento: 0.192409 - Acc: 92.67%
+Época 28/200 - Perda no treinamento: 0.171175 - Acc: 93.89%
+Época 29/200 - Perda no treinamento: 0.166524 - Acc: 94.07%
+Época 30/200 - Perda no treinamento: 0.168438 - Acc: 93.73%
+Época 31/200 - Perda no treinamento: 0.162426 - Acc: 94.29%
+Época 32/200 - Perda no treinamento: 0.163842 - Acc: 94.29%
+Época 33/200 - Perda no treinamento: 0.170444 - Acc: 93.84%
+Época 34/200 - Perda no treinamento: 0.155205 - Acc: 94.20%
+Época 35/200 - Perda no treinamento: 0.160743 - Acc: 94.42%
+Época 36/200 - Perda no treinamento: 0.152197 - Acc: 94.71%
+Época 37/200 - Perda no treinamento: 0.174859 - Acc: 93.60%
+Época 38/200 - Perda no treinamento: 0.157066 - Acc: 94.51%
+Época 39/200 - Perda no treinamento: 0.173415 - Acc: 93.67%
+Época 40/200 - Perda no treinamento: 0.160947 - Acc: 94.11%
+Época 41/200 - Perda no treinamento: 0.152868 - Acc: 94.51%
+Época 42/200 - Perda no treinamento: 0.155916 - Acc: 94.49%
+Época 43/200 - Perda no treinamento: 0.154426 - Acc: 94.44%
+Época 44/200 - Perda no treinamento: 0.164997 - Acc: 94.42%
+Época 45/200 - Perda no treinamento: 0.147411 - Acc: 94.36%
+Época 46/200 - Perda no treinamento: 0.152128 - Acc: 94.64%
+Época 47/200 - Perda no treinamento: 0.137830 - Acc: 95.02%
+Época 48/200 - Perda no treinamento: 0.158161 - Acc: 94.53%
+Época 49/200 - Perda no treinamento: 0.148248 - Acc: 94.73%
+Época 50/200 - Perda no treinamento: 0.151893 - Acc: 94.76%
+Época 51/200 - Perda no treinamento: 0.153116 - Acc: 94.33%
+Época 52/200 - Perda no treinamento: 0.139511 - Acc: 95.02%
+Época 53/200 - Perda no treinamento: 0.137637 - Acc: 94.98%
+Época 54/200 - Perda no treinamento: 0.157637 - Acc: 95.13%
+Época 55/200 - Perda no treinamento: 0.133517 - Acc: 94.89%
+Época 56/200 - Perda no treinamento: 0.142898 - Acc: 94.62%
+Época 57/200 - Perda no treinamento: 0.143612 - Acc: 95.20%
+Época 58/200 - Perda no treinamento: 0.129763 - Acc: 95.47%
+Época 59/200 - Perda no treinamento: 0.131886 - Acc: 95.22%
+Época 60/200 - Perda no treinamento: 0.140227 - Acc: 94.98%
+Época 61/200 - Perda no treinamento: 0.138990 - Acc: 95.24%
+Época 62/200 - Perda no treinamento: 0.143587 - Acc: 94.87%
+Época 63/200 - Perda no treinamento: 0.141019 - Acc: 94.89%
+Época 64/200 - Perda no treinamento: 0.137979 - Acc: 94.98%
+Época 65/200 - Perda no treinamento: 0.127204 - Acc: 95.18%
+Época 66/200 - Perda no treinamento: 0.123441 - Acc: 95.73%
+Época 67/200 - Perda no treinamento: 0.129183 - Acc: 95.38%
+Época 68/200 - Perda no treinamento: 0.132605 - Acc: 95.18%
+Época 69/200 - Perda no treinamento: 0.128355 - Acc: 95.16%
+Época 70/200 - Perda no treinamento: 0.134331 - Acc: 95.42%
+Época 71/200 - Perda no treinamento: 0.127521 - Acc: 95.38%
+Época 72/200 - Perda no treinamento: 0.122428 - Acc: 95.49%
+Época 73/200 - Perda no treinamento: 0.131031 - Acc: 95.60%
+Época 74/200 - Perda no treinamento: 0.116755 - Acc: 96.13%
+Época 75/200 - Perda no treinamento: 0.144446 - Acc: 95.16%
+Época 76/200 - Perda no treinamento: 0.127870 - Acc: 95.64%
+Época 77/200 - Perda no treinamento: 0.132904 - Acc: 95.20%
+Época 78/200 - Perda no treinamento: 0.116690 - Acc: 96.02%
+Época 79/200 - Perda no treinamento: 0.132684 - Acc: 95.22%
+Época 80/200 - Perda no treinamento: 0.135461 - Acc: 95.00%
+Época 81/200 - Perda no treinamento: 0.120026 - Acc: 95.47%
+Época 82/200 - Perda no treinamento: 0.129350 - Acc: 95.16%
+Época 83/200 - Perda no treinamento: 0.118444 - Acc: 95.76%
+Época 84/200 - Perda no treinamento: 0.124286 - Acc: 95.76%
+Época 85/200 - Perda no treinamento: 0.120441 - Acc: 95.89%
+Época 86/200 - Perda no treinamento: 0.119349 - Acc: 95.80%
+Época 87/200 - Perda no treinamento: 0.125261 - Acc: 95.51%
+Época 88/200 - Perda no treinamento: 0.119882 - Acc: 95.53%
+Época 89/200 - Perda no treinamento: 0.126587 - Acc: 95.29%
+Época 90/200 - Perda no treinamento: 0.113209 - Acc: 95.67%
+Época 91/200 - Perda no treinamento: 0.124594 - Acc: 95.91%
+Época 92/200 - Perda no treinamento: 0.114673 - Acc: 95.56%
+Época 93/200 - Perda no treinamento: 0.122118 - Acc: 95.13%
+Época 94/200 - Perda no treinamento: 0.109055 - Acc: 96.04%
+Época 95/200 - Perda no treinamento: 0.113552 - Acc: 96.02%
+Época 96/200 - Perda no treinamento: 0.125258 - Acc: 95.24%
+Época 97/200 - Perda no treinamento: 0.134217 - Acc: 95.42%
+Época 98/200 - Perda no treinamento: 0.112152 - Acc: 96.16%
+Época 99/200 - Perda no treinamento: 0.111772 - Acc: 95.98%
+Época 100/200 - Perda no treinamento: 0.114260 - Acc: 95.98%
+Época 101/200 - Perda no treinamento: 0.111291 - Acc: 96.02%
+Época 102/200 - Perda no treinamento: 0.117427 - Acc: 95.82%
+Época 103/200 - Perda no treinamento: 0.107108 - Acc: 96.11%
+Época 104/200 - Perda no treinamento: 0.118238 - Acc: 96.07%
+Época 105/200 - Perda no treinamento: 0.110306 - Acc: 96.13%
+Época 106/200 - Perda no treinamento: 0.114614 - Acc: 95.93%
+Época 107/200 - Perda no treinamento: 0.139966 - Acc: 95.22%
+Época 108/200 - Perda no treinamento: 0.113851 - Acc: 95.93%
+Época 109/200 - Perda no treinamento: 0.111114 - Acc: 96.16%
+Época 110/200 - Perda no treinamento: 0.111994 - Acc: 95.93%
+Época 111/200 - Perda no treinamento: 0.111415 - Acc: 95.96%
+Época 112/200 - Perda no treinamento: 0.103408 - Acc: 96.60%
+Época 113/200 - Perda no treinamento: 0.126090 - Acc: 96.31%
+Época 114/200 - Perda no treinamento: 0.102084 - Acc: 96.22%
+Época 115/200 - Perda no treinamento: 0.117517 - Acc: 96.36%
+Época 116/200 - Perda no treinamento: 0.116097 - Acc: 96.18%
+Época 117/200 - Perda no treinamento: 0.110632 - Acc: 96.02%
+Época 118/200 - Perda no treinamento: 0.111949 - Acc: 96.36%
+Época 119/200 - Perda no treinamento: 0.106423 - Acc: 96.09%
+Época 120/200 - Perda no treinamento: 0.112617 - Acc: 95.89%
+Época 121/200 - Perda no treinamento: 0.102422 - Acc: 96.18%
+Época 122/200 - Perda no treinamento: 0.117003 - Acc: 95.62%
+Época 123/200 - Perda no treinamento: 0.104717 - Acc: 96.02%
+Época 124/200 - Perda no treinamento: 0.102241 - Acc: 96.09%
+Época 125/200 - Perda no treinamento: 0.087185 - Acc: 96.82%
+Época 126/200 - Perda no treinamento: 0.121134 - Acc: 95.84%
+Época 127/200 - Perda no treinamento: 0.121033 - Acc: 95.53%
+Época 128/200 - Perda no treinamento: 0.121913 - Acc: 95.78%
+Época 129/200 - Perda no treinamento: 0.116769 - Acc: 95.69%
+Época 130/200 - Perda no treinamento: 0.097846 - Acc: 96.53%
+Época 131/200 - Perda no treinamento: 0.112645 - Acc: 96.16%
+Época 132/200 - Perda no treinamento: 0.110659 - Acc: 96.44%
+Época 133/200 - Perda no treinamento: 0.131049 - Acc: 95.82%
+Época 134/200 - Perda no treinamento: 0.096065 - Acc: 96.64%
+Época 135/200 - Perda no treinamento: 0.096433 - Acc: 96.40%
+Época 136/200 - Perda no treinamento: 0.101371 - Acc: 96.44%
+Época 137/200 - Perda no treinamento: 0.090960 - Acc: 96.96%
+Época 138/200 - Perda no treinamento: 0.120678 - Acc: 95.82%
+Época 139/200 - Perda no treinamento: 0.103273 - Acc: 96.47%
+Época 140/200 - Perda no treinamento: 0.096155 - Acc: 96.38%
+Época 141/200 - Perda no treinamento: 0.089470 - Acc: 96.64%
+Época 142/200 - Perda no treinamento: 0.096005 - Acc: 96.60%
+Época 143/200 - Perda no treinamento: 0.094254 - Acc: 96.51%
+Época 144/200 - Perda no treinamento: 0.157892 - Acc: 95.91%
+Época 145/200 - Perda no treinamento: 0.098788 - Acc: 96.44%
+Época 146/200 - Perda no treinamento: 0.100594 - Acc: 96.22%
+Época 147/200 - Perda no treinamento: 0.088454 - Acc: 96.80%
+Época 148/200 - Perda no treinamento: 0.092676 - Acc: 96.84%
+Época 149/200 - Perda no treinamento: 0.120403 - Acc: 96.07%
+Época 150/200 - Perda no treinamento: 0.105954 - Acc: 96.04%
+Época 151/200 - Perda no treinamento: 0.087809 - Acc: 96.67%
+Época 152/200 - Perda no treinamento: 0.089966 - Acc: 96.49%
+Época 153/200 - Perda no treinamento: 0.090303 - Acc: 96.44%
+Época 154/200 - Perda no treinamento: 0.100017 - Acc: 96.44%
+Época 155/200 - Perda no treinamento: 0.097385 - Acc: 96.44%
+Época 156/200 - Perda no treinamento: 0.098414 - Acc: 96.18%
+Época 157/200 - Perda no treinamento: 0.094774 - Acc: 96.69%
+Época 158/200 - Perda no treinamento: 0.101233 - Acc: 96.67%
+Época 159/200 - Perda no treinamento: 0.091123 - Acc: 96.82%
+Época 160/200 - Perda no treinamento: 0.086573 - Acc: 96.93%
+Época 161/200 - Perda no treinamento: 0.086949 - Acc: 96.84%
+Época 162/200 - Perda no treinamento: 0.088965 - Acc: 96.33%
+Época 163/200 - Perda no treinamento: 0.092459 - Acc: 96.80%
+Época 164/200 - Perda no treinamento: 0.080485 - Acc: 97.07%
+Época 165/200 - Perda no treinamento: 0.089353 - Acc: 96.47%
+Época 166/200 - Perda no treinamento: 0.096145 - Acc: 96.56%
+Época 167/200 - Perda no treinamento: 0.079643 - Acc: 97.09%
+Época 168/200 - Perda no treinamento: 0.090197 - Acc: 96.62%
+Época 169/200 - Perda no treinamento: 0.089250 - Acc: 96.56%
+Época 170/200 - Perda no treinamento: 0.091736 - Acc: 97.16%
+Época 171/200 - Perda no treinamento: 0.093515 - Acc: 96.51%
+Época 172/200 - Perda no treinamento: 0.080150 - Acc: 97.29%
+Época 173/200 - Perda no treinamento: 0.088228 - Acc: 96.69%
+Época 174/200 - Perda no treinamento: 0.084390 - Acc: 96.73%
+Época 175/200 - Perda no treinamento: 0.089208 - Acc: 96.76%
+Época 176/200 - Perda no treinamento: 0.086801 - Acc: 96.67%
+Época 177/200 - Perda no treinamento: 0.087280 - Acc: 96.51%
+Época 178/200 - Perda no treinamento: 0.090449 - Acc: 96.73%
+Época 179/200 - Perda no treinamento: 0.094691 - Acc: 96.56%
+Época 180/200 - Perda no treinamento: 0.089590 - Acc: 96.49%
+Época 181/200 - Perda no treinamento: 0.086427 - Acc: 96.91%
+Época 182/200 - Perda no treinamento: 0.090116 - Acc: 96.87%
+Época 183/200 - Perda no treinamento: 0.090380 - Acc: 96.76%
+Época 184/200 - Perda no treinamento: 0.182104 - Acc: 96.02%
+Época 185/200 - Perda no treinamento: 0.078496 - Acc: 97.09%
+Época 186/200 - Perda no treinamento: 0.077132 - Acc: 97.07%
+Época 187/200 - Perda no treinamento: 0.079125 - Acc: 97.18%
+Época 188/200 - Perda no treinamento: 0.091826 - Acc: 97.00%
+Época 189/200 - Perda no treinamento: 0.087176 - Acc: 96.98%
+Época 190/200 - Perda no treinamento: 0.074820 - Acc: 97.02%
+Época 191/200 - Perda no treinamento: 0.088107 - Acc: 96.87%
+Época 192/200 - Perda no treinamento: 0.079344 - Acc: 97.16%
+Época 193/200 - Perda no treinamento: 0.085384 - Acc: 96.84%
+Época 194/200 - Perda no treinamento: 0.084701 - Acc: 96.80%
+Época 195/200 - Perda no treinamento: 0.079201 - Acc: 97.11%
+Época 196/200 - Perda no treinamento: 0.074372 - Acc: 97.13%
+Época 197/200 - Perda no treinamento: 0.075157 - Acc: 97.33%
+Época 198/200 - Perda no treinamento: 0.394753 - Acc: 94.51%
+Época 199/200 - Perda no treinamento: 0.090010 - Acc: 96.47%
+Época 200/200 - Perda no treinamento: 0.074216 - Acc: 97.38%
+
+Acurácia para o Fold 10: 96.00%
+Precisão para o Fold 10: 96.07%
+Recall para o Fold 10: 96.00%
+F1 para o Fold 10: 95.98%
+
+!!!Teste finalizado!!!
+
+Tempo total de treinamento: 191192 segundos ou 53 horas
+
+Resultados Acc: {0: 95.0, 1: 95.0, 2: 96.8, 3: 95.8, 4: 97.0, 5: 95.0, 6: 96.0, 7: 95.19999999999999, 8: 96.39999999999999, 9: 96.0}
+Resultados Precision: {0: 95.16545808162023, 1: 95.00930748526157, 2: 96.8092879256966, 3: 95.84214410126236, 4: 97.04331877072384, 5: 94.99697634373156, 6: 96.02039636663915, 7: 95.25737024074552, 8: 96.39271675781401, 9: 96.07288848568454}
+Resultados Recall: {0: 95.0, 1: 95.0, 2: 96.8, 3: 95.8, 4: 97.0, 5: 95.0, 6: 96.0, 7: 95.19999999999999, 8: 96.39999999999999, 9: 96.0}
+Resultados F1: {0: 94.9866160789073, 1: 95.00285554361697, 2: 96.80239422084624, 3: 95.77293277883166, 4: 97.00596853791204, 5: 94.99675840149132, 6: 96.00513429139039, 7: 95.21081223320273, 8: 96.39459867512637, 9: 95.98319087479851}
+
+Média Acc: 95.82
+Média Precision: 95.86098645591794
+Média Recall: 95.82
+Média F1: 95.81612616361235
