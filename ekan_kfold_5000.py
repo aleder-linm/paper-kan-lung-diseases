@@ -1,13 +1,32 @@
 from efficient_kan import KAN
 import time
+import sys
+import os
+import psutil
+import numpy as np
 import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from thop import profile
 from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, SubsetRandomSampler
+from torch.utils.data import DataLoader, Subset, Dataset
 from sklearn.model_selection import KFold
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
+
+class Logger(object):
+    def __init__(self, filename="resultados_ekan.txt"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "w", encoding="utf-8")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def flush(self):
+        pass
+
+sys.stdout = Logger("resultados_ekan.txt")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Dispositivo utilizado: ", device)
@@ -15,20 +34,39 @@ print("Dispositivo utilizado: ", device)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
-transform_dataset = transforms.Compose(
-    [transforms.Resize(size = (164,164)),
-     transforms.RandomRotation(degrees=10),
-     transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1), shear=10),
-     transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.1, hue=0.1),
+transform_test = transforms.Compose(
+    [transforms.Resize(size=(164,164)),
      transforms.ToTensor(),
-     transforms.Lambda(lambda x: torch.clamp(x + torch.randn_like(x) * 0.05, 0., 1.)),
      transforms.Normalize(mean=[0.5], std=[0.5])
     ]
 )
 
-dataset = datasets.ImageFolder(root='dataset', transform=transform_dataset)
-print("\nInformações sobre o Dataset completo: \n\n", dataset)
-print("\nRótulos: ", dataset.class_to_idx)
+transform_train = transforms.Compose(
+    [transforms.Resize(size = (164,164)),
+     transforms.RandomAffine(degrees=10, translate=(0.1, 0.1), scale=(0.9, 1.1), shear=10),
+     transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.1, hue=0.1),
+     transforms.ToTensor(),
+     transforms.Normalize(mean=[0.5], std=[0.5])
+    ]
+)
+
+class TransformedSubset(Dataset):
+    def __init__(self, subset, transform=None):
+        self.subset = subset
+        self.transform = transform
+
+    def __getitem__(self, index):
+        x, y = self.subset[index]
+        if self.transform:
+            x = self.transform(x)
+        return x, y
+
+    def __len__(self):
+        return len(self.subset)
+
+full_dataset = datasets.ImageFolder(root='dataset', transform=None)
+print("\nInformações sobre o Dataset completo: \n\n", full_dataset)
+print("\nRótulos: ", full_dataset.class_to_idx)
 
 def ekan_model():
     model = KAN([164*164*3, 164, 64, 32, 3])
@@ -40,10 +78,36 @@ learning_rate = 0.001
 k_folds = 10
 kf = KFold(n_splits=k_folds, shuffle=True, random_state=42)
 
-results_acc = {}
-results_precision = {}
-results_recall = {}
-results_f1 = {}
+classes_names = ['Normal', 'Pneumonia', 'Tuberculosis']
+
+results_acc = []
+results_precision_class = {0: [], 1: [], 2: []}
+results_recall_class = {0: [], 1: [], 2: []}
+results_f1_class = {0: [], 1: [], 2: []}
+
+results_train_acc = []
+results_precision_macro = []
+results_recall_macro = []
+results_f1_macro = []
+
+print("\nAnalisando o custo computacional do modelo...")
+temp_model = fkan_model().to(device)
+
+dummy_input = torch.randn(1, 3, 164, 164).to(device)
+dummy_input_flat = dummy_input.view(1, -1)
+
+flops, params = profile(temp_model, inputs=(dummy_input_flat,), verbose=False)
+gflops = flops / 1e9
+
+print(f"==================================================")
+print(f"[PERFIL DO MODELO]")
+print(f"Total de Parâmetros: {params:,}")
+print(f"Custo Computacional: {gflops:.4f} GFLOPS (por inferência/imagem)")
+print(f"==================================================\n")
+
+del temp_model, dummy_input
+if torch.cuda.is_available():
+    torch.cuda.empty_cache()
 
 training_start_time = time.time()
 
@@ -57,20 +121,21 @@ for fold, (train_idx, test_idx) in enumerate(kf.split(dataset)):
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     loss_fn = nn.CrossEntropyLoss()
 
-    train_sampler = SubsetRandomSampler(train_idx)
-    test_sampler = SubsetRandomSampler(test_idx)
+    train_subset = Subset(full_dataset, train_idx)
+    test_subset = Subset(full_dataset, test_idx)
+    
+    train_data = TransformedSubset(train_subset, transform=transform_train)
+    test_data = TransformedSubset(test_subset, transform=transform_test)
 
-    trainloader = DataLoader(dataset, batch_size=16, sampler=train_sampler)
-    testloader = DataLoader(dataset, batch_size=16, sampler=test_sampler)
+    trainloader = DataLoader(train_data, batch_size=16, shuffle=True)
+    testloader = DataLoader(test_data, batch_size=16, shuffle=False)
 
     all_targets = []
-    n = []
-    p = []
-    t = []
     for img, rtl, in trainloader:
         all_targets.extend(rtl.tolist())
 
-    for i in range(len(train_sampler)):
+    n, p, t = [], [], []
+    for i in range(len(train_subset)):
         if all_targets[i] == 0:
             n.append(all_targets[i])
         elif all_targets[i] == 1:
@@ -82,6 +147,9 @@ for fold, (train_idx, test_idx) in enumerate(kf.split(dataset)):
     print(f'Normal: {len(n)}')
     print(f'Pneumonia: {len(p)}')
     print(f'Tuberculose: {len(t)}\n')
+    
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats(device)
 
     train_losses = []
     train_acc = []
@@ -120,17 +188,19 @@ for fold, (train_idx, test_idx) in enumerate(kf.split(dataset)):
 
         print(f"Época {epoch + 1}/{num_epoch} - Perda no treinamento: {train_loss:.6f} - Acc: {100 * acc_train:.2f}%")
 
+    results_train_acc.append(train_acc[-1])
+
     epochs = range(1, num_epoch + 1)
     plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
     plt.plot(epochs, train_losses, 'bo-')
-    plt.xlabel('Épocas')
-    plt.ylabel('Perda')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
     plt.subplot(1, 2, 2)
     plt.plot(epochs, train_acc, 'ro-')
-    plt.xlabel('Épocas')
-    plt.ylabel('Acurácia')
-    plt.suptitle("Treinamento", fontsize = 20)
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.suptitle("Trainning", fontsize = 20)
     plt.savefig(f'train_loss_acc_fold-{fold+1}.png', bbox_inches='tight')
 
     model.eval()
@@ -147,40 +217,93 @@ for fold, (train_idx, test_idx) in enumerate(kf.split(dataset)):
             all_labels_test.extend(labels_test.cpu().numpy())
 
         acc_test = accuracy_score(all_labels_test, all_preds_test)
-        precision_test = precision_score(all_labels_test, all_preds_test, average='weighted')
-        recall_test = recall_score(all_labels_test, all_preds_test, average='weighted')
-        f1_test = f1_score(all_labels_test, all_preds_test, average='weighted')
+        results_acc.append(acc_test)
+        
+        precision_test = precision_score(all_labels_test, all_preds_test, average=None, zero_division=0)
+        recall_test = recall_score(all_labels_test, all_preds_test, average=None, zero_division=0)
+        f1_test = f1_score(all_labels_test, all_preds_test, average=None, zero_division=0)
+        
+        results_precision_macro.append(sum(precision_test) / 3)
+        results_recall_macro.append(sum(recall_test) / 3)
+        results_f1_macro.append(sum(f1_test) / 3)
     
-    print(f'\nAcurácia para o Fold {fold+1}: {100 * acc_test:.2f}%')
-    results_acc[fold] = (100 * acc_test)
-
-    print(f'Precisão para o Fold {fold+1}: {100 * precision_test:.2f}%')
-    results_precision[fold] = (100 * precision_test)
-
-    print(f'Recall para o Fold {fold+1}: {100 * recall_test:.2f}%')
-    results_recall[fold] = (100 * recall_test)
-
-    print(f'F1 para o Fold {fold+1}: {100 * f1_test:.2f}%')
-    results_f1[fold] = (100 * f1_test)
+    print(f'\n--- Resultados do Fold {fold+1} ---')
+    print(f'Acurácia Global: {100 * acc_test:.2f}%\n')
+    
+    print(classification_report(all_labels_test, all_preds_test, target_names=classes_names, zero_division=0))
+    
+    for i in range(3):
+        results_precision_class[i].append(precision_test[i])
+        results_recall_class[i].append(recall_test[i])
+        results_f1_class[i].append(f1_test[i])
 
     cm = confusion_matrix(all_labels_test, all_preds_test)
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Normal', 'Pneumonia', 'Tuberculose'])
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes_names)
     disp.plot(cmap=plt.cm.Blues)
-    plt.xlabel('Rótulo previsto')
-    plt.ylabel('Rótulo verdadeiro')
-    plt.savefig(f'test_matrizconfusao_fold-{fold+1}.png', bbox_inches='tight')
+    plt.xlabel('Predicted Label')
+    plt.ylabel('True Label')
+    plt.savefig(f'test_ekan_fold-{fold+1}.png', bbox_inches='tight')
+    plt.close()
+    
+    if torch.cuda.is_available():
+        peak_mem_mb = torch.cuda.max_memory_allocated(device) / (1024 ** 2)
+        print(f"Pico Máximo de Memória (VRAM GPU): {peak_mem_mb:.2f} MB")
+    else:
+        process = psutil.Process(os.getpid())
+        mem_mb = process.memory_info().rss / (1024 ** 2)
+        print(f"Uso de Memória (RAM Sistema): {mem_mb:.2f} MB")
 
-    print("\n!!!Teste finalizado!!!")
+    print(f'!!!Teste do Fold {fold+1} finalizado!!!')
 
 training_time = time.time() - training_start_time
-print(f"\nTempo total de treinamento: {training_time:.2f} segundos")
 
-print(f'\nResultados Acc: {results_acc}')
-print(f'Resultados Precision: {results_precision}')
-print(f'Resultados Recall: {results_recall}')
-print(f'Resultados F1: {results_f1}')
+print(f'\n========================================================')
+print(f"\nTempo total de treinamento (10 FOLDS): {training_time:.2f} segundos")
+print(f'\n========================================================')
 
-print(f'\nMédia Acc: {sum(results_acc.values()) / k_folds}')
-print(f'Média Precision: {sum(results_precision.values()) / k_folds}')
-print(f'Média Recall: {sum(results_recall.values()) / k_folds}')
-print(f'Média F1: {sum(results_f1.values()) / k_folds}')
+print(f'\n--- Médias finais após {k_folds} FOLDS ---')
+print(f'Acurácia Global Média: {100 * (sum(results_acc) / k_folds):.2f}%\n')
+
+print("Desempenho médio por classe:")
+print("-" * 50)
+print(f'{'Classe':<15} | {'Precisão':<10} | {'Recall':<10} | {'F1-Score':<10}')
+print("-" * 50)
+
+for i, class_name in enumerate(classes_names):
+    avg_prec = sum(results_precision_class[i]) / k_folds
+    avg_rec = sum(results_recall_class[i]) / k_folds
+    avg_f1 = sum(results_f1_class[i]) / k_folds
+
+    print(f'{class_name:<15} | {100 * avg_prec:.2f}% | {100 * avg_rec:.2f}% | {100 * avg_f1:.2f}%')
+
+print("-" * 50)
+
+print("\nGerando Boxplot comparativo...")
+
+dados_boxplot = [
+    [acc * 100 for acc in results_train_acc],
+    [acc * 100 for acc in results_acc],
+    [prec * 100 for prec in results_precision_macro],
+    [rec * 100 for rec in results_recall_macro],
+    [f1 * 100 for f1 in results_f1_macro]
+]
+
+labels = ['Treino\n(Acurácia)', 'Teste\n(Acurácia)', 'Teste\n(Precisão)', 'Teste\n(Recall)', 'Teste\n(F1-Score)']
+
+plt.figure(figsize=(10, 6))
+
+box = plt.boxplot(dados_boxplot, labels=labels, patch_artist=True,
+                  boxprops=dict(facecolor='lightblue', color='blue'),
+                  medianprops=dict(color='red', linewidth=2),
+                  whiskerprops=dict(color='blue'),
+                  capprops=dict(color='blue'))
+
+plt.ylim(80, 100)
+
+plt.ylabel('Performance (%)', fontsize=12)
+plt.title('Distribution of Metrics Across the 10 Folds', fontsize=14)
+
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+plt.savefig('ekan_boxplot_metricas_folds.png', bbox_inches='tight')
+plt.show()
