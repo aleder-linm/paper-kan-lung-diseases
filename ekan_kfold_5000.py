@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from thop import profile
+from fvcore.nn import FlopCountAnalysis, parameter_count
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Subset, Dataset
 from sklearn.model_selection import KFold
@@ -91,17 +91,28 @@ results_recall_macro = []
 results_f1_macro = []
 
 print("\nAnalisando o custo computacional do modelo...")
-temp_model = fkan_model().to(device)
+temp_model = ekan_model().to(device)
 
 dummy_input = torch.randn(1, 3, 164, 164).to(device)
 dummy_input_flat = dummy_input.view(1, -1)
 
-flops, params = profile(temp_model, inputs=(dummy_input_flat,), verbose=False)
-gflops = flops / 1e9
+flops_analysis = FlopCountAnalysis(temp_model, (dummy_input_flat,))
+
+print("--- DEBUGGING ---")
+print(f"É nn.Module? {isinstance(temp_model, torch.nn.Module)}")
+print(f"Input shape: {dummy_input_flat.shape}")
+print(f"Input device: {dummy_input_flat.device}")
+print(f"Model params nativos: {sum(p.numel() for p in temp_model.parameters())}")
+print("-----------------\n")
+
+total_flops = flops_analysis.total() * 2 
+gflops = total_flops / 1e9
+
+total_params = sum(p.numel() for p in temp_model.parameters())
 
 print(f"==================================================")
-print(f"[PERFIL DO MODELO]")
-print(f"Total de Parâmetros: {params:,}")
+print(f"[PERFIL DO MODELO - FVCORE]")
+print(f"Total de Parâmetros: {total_params:,}")
 print(f"Custo Computacional: {gflops:.4f} GFLOPS (por inferência/imagem)")
 print(f"==================================================\n")
 
@@ -111,7 +122,7 @@ if torch.cuda.is_available():
 
 training_start_time = time.time()
 
-for fold, (train_idx, test_idx) in enumerate(kf.split(dataset)):
+for fold, (train_idx, test_idx) in enumerate(kf.split(full_dataset)):
     print(f'\nFold {fold+1}/{k_folds}')
     print(f'\nQuantidade de dados (Treinamento): {len(train_idx)}')
     print(f'Quantidade de dados (Teste): {len(test_idx)}')
