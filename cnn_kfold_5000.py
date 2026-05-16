@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from thop import profile
+from fvcore.nn import FlopCountAnalysis, parameter_count
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Subset, Dataset
 from sklearn.model_selection import KFold
@@ -37,7 +37,7 @@ torch.backends.cudnn.benchmark = False
 transform_test = transforms.Compose(
     [transforms.Resize(size=(164,164)),
      transforms.ToTensor(),
-     transforms.Normalize(mean=[0.5], std=[0.5])
+     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
     ]
 )
 
@@ -47,7 +47,7 @@ transform_train = transforms.Compose(
      transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), scale=(0.9, 1.1), shear=10),
      transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.1, hue=0.1),
      transforms.ToTensor(),
-     transforms.Normalize(mean=[0.5], std=[0.5])
+     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
     ]
 )
 
@@ -138,12 +138,16 @@ temp_model = cnn_model().to(device)
 
 dummy_input = torch.randn(1, 3, 164, 164).to(device)
 
-flops, params = profile(temp_model, inputs=(dummy_input,), verbose=False)
-gflops = flops / 1e9
+flops_analysis = FlopCountAnalysis(temp_model, (dummy_input,))
+
+total_flops = flops_analysis.total() * 2 
+gflops = total_flops / 1e9
+
+total_params = sum(p.numel() for p in temp_model.parameters())
 
 print(f"==================================================")
-print(f"[PERFIL DO MODELO]")
-print(f"Total de Parâmetros: {params:,}")
+print(f"[PERFIL DO MODELO - FVCORE]")
+print(f"Total de Parâmetros: {total_params:,}")
 print(f"Custo Computacional: {gflops:.4f} GFLOPS (por inferência/imagem)")
 print(f"==================================================\n")
 
@@ -307,7 +311,7 @@ print(f'Acurácia Global Média: {100 * (sum(results_acc) / k_folds):.2f}%\n')
 
 print("Desempenho médio por classe:")
 print("-" * 50)
-print(f'{'Classe':<15} | {'Precisão':<10} | {'Recall':<10} | {'F1-Score':<10}')
+print(f"{'Classe':<15} | {'Precisão':<10} | {'Recall':<10} | {'F1-Score':<10}")
 print("-" * 50)
 
 for i, class_name in enumerate(classes_names):

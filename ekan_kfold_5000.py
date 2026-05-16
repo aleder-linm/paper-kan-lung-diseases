@@ -277,7 +277,7 @@ print(f'Acurácia Global Média: {100 * (sum(results_acc) / k_folds):.2f}%\n')
 
 print("Desempenho médio por classe:")
 print("-" * 50)
-print(f'{'Classe':<15} | {'Precisão':<10} | {'Recall':<10} | {'F1-Score':<10}')
+print(f"{'Classe':<15} | {'Precisão':<10} | {'Recall':<10} | {'F1-Score':<10}")
 print("-" * 50)
 
 for i, class_name in enumerate(classes_names):
